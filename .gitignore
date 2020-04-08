@@ -1,0 +1,29 @@
+# Local clutter
+.DS_Store
+.sass-cache
+.idea
+*.css.map
+
+# Ignore composer libraries
+/vendor
+
+# Ignore npm libraries
+/node_modules
+
+# Ignore build cruft
+/mix-manifest.json
+/public/cache
+
+# Environment-specific files
+/.env
+/.env.sh
+/public/.htaccess
+
+# Local symlinks
+/scripts
+
+# Automatic database backups
+/automysqlbackup
+
+# For ServerPilot servers
+/public/.user.ini

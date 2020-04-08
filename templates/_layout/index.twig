@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Prototype</title>
+{#    <title>{{ (title ? "#{title} | ") ~ systemName }}</title>#}
+{#    {% include '_includes/favicon-set' %}#}
+{#    {% include '_includes/app-variables' %}#}
+</head>
+
+{% do view.registerCssFile('https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css') %}
+{% do view.registerJsFile('https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js') %}
+
+<body>
+    {% include '_layout/header' %}
+    {% block content null %}
+    {% include '_layout/footer' %}
+</body>
+</html>

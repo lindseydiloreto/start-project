@@ -1,0 +1,3 @@
+{% for panel in panels %}
+    {% include "_panels/#{panel.type.handle}" ignore missing with {'panel': panel} only %}
+{% endfor %}

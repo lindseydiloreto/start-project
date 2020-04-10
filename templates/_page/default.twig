@@ -3,7 +3,7 @@
 
 {% block content %}
     <div class="bg-orange-100 max-w-screen-lg mx-auto py-4">
-        <h1 class="text-xl font-bold px-5">{{ entry.title }}</h1>
+        <h1>{{ entry.title }}</h1>
         {% include '_panels' with {'matrix': entry.panels} only %}
     </div>
 {% endblock %}

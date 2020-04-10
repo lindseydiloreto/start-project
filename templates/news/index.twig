@@ -35,12 +35,12 @@
 
     <div class="bg-orange-100 max-w-screen-lg mx-auto py-4">
 
-        <h1 class="text-xl font-bold px-5">List of Entries</h1>
+        <h1>List of Entries</h1>
 
         <div x-data="data">
             <template x-for="entry in entries" :key="entry">
                 <div class="mx-4 my-3 p-6 bg-white rounded-md shadow">
-                    <h3 x-text="entry.title" @click="alert(entry.url)" class="cursor-pointer text-lg underline mb-1"></h3>
+                    <h3 x-text="entry.title" @click="alert(entry.url)" class="cursor-pointer underline mb-1"></h3>
                     <div x-html="entry.description"></div>
                 </div>
             </template>

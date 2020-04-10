@@ -1,0 +1,10 @@
+{
+  "toolbarFixed": true,
+  "breakline": true,
+  "buttons": [
+    "bold",
+    "italic",
+    "underline",
+    "deleted"
+  ]
+}

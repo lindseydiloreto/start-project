@@ -1,0 +1,27 @@
+{
+  "toolbarFixed": true,
+  "linkNewTab": true,
+  "buttons": [
+    "html",
+    "format",
+    "bold",
+    "italic",
+    "underline",
+    "deleted",
+    "image",
+    "link",
+    "line",
+    "lists"
+  ],
+  "plugins": [
+    "alignment",
+    "fontcolor",
+    "table",
+    "fullscreen"
+  ],
+  "imagePosition": {
+    "left": "image-left",
+    "right": "image-right",
+    "center": "image-center"
+  }
+}

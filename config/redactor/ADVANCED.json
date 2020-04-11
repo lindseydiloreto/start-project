@@ -8,9 +8,9 @@
     "italic",
     "underline",
     "deleted",
-    "image",
-    "link",
     "line",
+    "link",
+    "image",
     "lists"
   ],
   "plugins": [

@@ -19,3 +19,8 @@ mix
     .sass(`${src.sass}/styles.scss`, dist.css)
     // .js(`${src.js}/scripts.js`, dist.js)
     .disableNotifications();
+
+// // If running in production, append version
+// if (mix.config.production) {
+//     mix.version();
+// }

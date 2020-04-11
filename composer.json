@@ -42,6 +42,9 @@
     ],
     "nuke": [
       "rm -rf vendor/ && rm composer.lock && composer clear-cache && composer update"
+    ],
+    "nuke-npm": [
+      "npm run nuke"
     ]
   }
 }

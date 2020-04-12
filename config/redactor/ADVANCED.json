@@ -17,11 +17,24 @@
     "alignment",
     "fontcolor",
     "table",
-    "fullscreen"
+    "fullscreen",
+    "clips"
+  ],
+  "formatting": [
+    "p",
+    "blockquote",
+    "pre",
+    "h2",
+    "h3",
+    "h4"
   ],
   "imagePosition": {
     "left": "image-left",
     "right": "image-right",
     "center": "image-center"
-  }
+  },
+  "clips": [
+    ["Small Button", "<a class=\"text-sm bg-blue-500 hover:bg-blue-700 text-white hover:text-white font-bold py-1 px-4 mx-1 my-1 inline-block cursor-pointer rounded\" href=\"#\">Small Button</a>"],
+    ["Large Button", "<a class=\"text-lg bg-blue-500 hover:bg-blue-700 text-white hover:text-white font-bold py-2 px-8 mx-2 my-1 inline-block cursor-pointer rounded\" href=\"#\">Large Button</a>"]
+  ]
 }

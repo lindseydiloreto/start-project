@@ -5,6 +5,10 @@
     "bold",
     "italic",
     "underline",
-    "deleted"
+    "deleted",
+    "link"
+  ],
+  "plugins": [
+    "fontcolor"
   ]
 }

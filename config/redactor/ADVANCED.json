@@ -20,14 +20,32 @@
     "fullscreen",
     "clips"
   ],
-  "formatting": [
-    "p",
-    "blockquote",
-    "pre",
-    "h2",
-    "h3",
-    "h4"
-  ],
+  "formatting": [],
+  "formattingAdd": {
+    "header": {
+      "title": "Header",
+      "api": "module.block.format",
+      "args": {
+        "tag": "h2",
+        "class": "font-bold text-2xl text-red-600"
+      }
+    },
+    "subheader": {
+      "title": "Subheader",
+      "api": "module.block.format",
+      "args": {
+        "tag": "h3",
+        "class": "font-bold text-lg text-blue-600"
+      }
+    },
+    "paragraph": {
+      "title": "Paragraph",
+      "api": "module.block.format",
+      "args": {
+        "tag": "p"
+      }
+    }
+  },
   "imagePosition": {
     "left": "image-left",
     "right": "image-right",

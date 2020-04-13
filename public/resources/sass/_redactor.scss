@@ -1,0 +1,23 @@
+// Reset Craft CP overrides
+.input .redactor-styles {
+  h1, h2, h3, h4, h5, h6 {
+    margin: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+
+.redactor-dropdown {
+  .redactor-dropdown-item-header {
+    color: #e53e3e;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .redactor-dropdown-item-subheader {
+    color: #3182ce;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+}

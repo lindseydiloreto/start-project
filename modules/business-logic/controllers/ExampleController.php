@@ -4,35 +4,10 @@ namespace modules\businesslogic\controllers;
 use Craft;
 use craft\web\Controller;
 
-/**
- * More info about Controllers...
- *
- * https://doublesecretagency.github.io/craft-businesslogic/controllers
- */
-
-/**
- * Business Logic Controller
- *
- * Controller methods get a little more complicated... There are several ways to access them:
- *
- *     1. Submitting a form can trigger a controller action.
- *     2. Using an AJAX request can trigger a controller action.
- *     3. Routing to an action URL will trigger a controller action.
- *
- * A controller can do many things, but be wary... If your logic gets too complex, you may want
- * to off-load much of it to the Service file.
- */
-
 class ExampleController extends Controller
 {
 
     /**
-     * By default, access to controllers is restricted to logged-in users.
-     * However, you can allow anonymous access by uncommenting the line below.
-     *
-     * It is also possible to allow anonymous access to only certain methods,
-     * by supplying an array of method names, rather than a boolean value.
-     *
      * See also:
      * https://docs.craftcms.com/api/v3/craft-web-controller.html#allowanonymous
      */

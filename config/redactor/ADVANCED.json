@@ -52,7 +52,7 @@
     "center": "image-center"
   },
   "clips": [
-    ["Small Button", "<a class=\"text-sm bg-blue-500 hover:bg-blue-700 text-white hover:text-white font-bold py-1 px-4 mx-1 my-1 inline-block cursor-pointer rounded\" href=\"#\">Small Button</a>"],
-    ["Large Button", "<a class=\"text-lg bg-blue-500 hover:bg-blue-700 text-white hover:text-white font-bold py-2 px-8 mx-2 my-1 inline-block cursor-pointer rounded\" href=\"#\">Large Button</a>"]
+    ["Small Button", "<a class=\"text-sm bg-blue-500 hover:bg-blue-700 text-white hover:text-white font-bold py-1 px-4 mx-1 my-1 inline-block cursor-pointer rounded shadow\" href=\"#\">Small Button</a>"],
+    ["Large Button", "<a class=\"text-lg bg-blue-500 hover:bg-blue-700 text-white hover:text-white font-bold py-2 px-8 mx-2 my-1 inline-block cursor-pointer rounded shadow\" href=\"#\">Large Button</a>"]
   ]
 }

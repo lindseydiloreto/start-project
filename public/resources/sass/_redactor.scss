@@ -4,11 +4,11 @@
     margin: inherit;
     font-weight: inherit;
     font-size: inherit;
-    line-height: inherit;
+    line-height: 1.5;
   }
 }
 
-
+// Format items in dropdown menu
 .redactor-dropdown {
   .redactor-dropdown-item-header {
     color: #e53e3e;

@@ -1,19 +1,16 @@
-h1 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
 h2 {
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin-top: 1rem;
+  //@apply font-bold text-2xl text-red-600
 }
 h3 {
-  font-size: 1.4rem;
-  font-weight: bold;
+  //@apply font-bold text-lg text-blue-600
 }
 
-p {
-  margin-top: 0.8rem;
+a.btn {
+  //@apply bg-blue-500 hover:bg-blue-700 text-white hover:text-white font-bold inline-block cursor-pointer rounded shadow
+}
+a.btn-sm {
+  //@apply text-sm mx-1 my-1 px-4 py-1
+}
+a.btn-lg {
+  //@apply text-lg mx-2 my-1 px-8 py-2
 }

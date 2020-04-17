@@ -1,3 +1,67 @@
 //@import 'colors';
 @import 'redactor-tailwind';
 @import 'redactor';
+
+$color-1: #064e0a;
+$color-2: #1b7021;
+$color-3: #388e3e;
+$color-4: #61af66;
+$color-5: #94ce98;
+
+// Login page
+body.login {
+  background: $color-3;
+}
+#login-form h1 {
+  //background: url('/resources/images/logo-che-white.png') 0 0 / 100% auto no-repeat;
+  //text-indent: -9999px;
+  width: 100%;
+  height: 70px;
+  display: block;
+}
+#password-fields,
+#forgot-password {
+  color: $color-5 !important;
+}
+
+// Sidebar
+#global-sidebar {
+  background: $color-3;
+}
+#global-sidebar a {
+  color: $color-5;
+}
+#global-sidebar > a:hover,
+#global-sidebar > a.active,
+#global-sidebar > a:active,
+#global-sidebar :not(.has-subnav) > a:hover,
+#global-sidebar :not(.has-subnav) > a.active,
+#global-sidebar :not(.has-subnav) > a:active {
+  color: $color-4;
+  background-color: $color-2 !important;
+}
+#global-sidebar :not(.has-subnav) > a.sel {
+  background-color: $color-1 !important;
+}
+#global-sidebar #system-info {
+  background: $color-3;
+  //background-image: url('/resources/images/logo-che-white.png') !important;
+  background-position: center center !important;
+  background-size: 190px auto !important;
+  background-repeat: no-repeat;
+  height: 35px;
+  //text-indent: -9999px;
+}
+#global-sidebar #system-info:focus,
+#global-sidebar #system-info:hover {
+  background-color: $color-2 !important;
+}
+#global-sidebar #system-info #site-icon,
+#global-sidebar #system-info #system-name {
+  display: none;
+}
+
+// Hide the "Updates Available" badge
+li#nav-utilities a .badge {
+  display: none;
+}

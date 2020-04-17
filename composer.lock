@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "37b5dc21821e29f5e936a8bdf6456c24",
+    "content-hash": "bba72c3628b15f2cfa3e9d00ccc9586f",
     "packages": [
         {
             "name": "angellco/spoon",
@@ -5074,11 +5074,11 @@
         },
         {
             "name": "verbb/base",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/c95545f2b86db0791294a4b25e967a007f1dbf57",
-                "reference": "c95545f2b86db0791294a4b25e967a007f1dbf57",
+                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/85a11791c811c90ea58a3718488af0e60e12ba2c",
+                "reference": "85a11791c811c90ea58a3718488af0e60e12ba2c",
                 "shasum": ""
             },
             "require": {
@@ -5090,7 +5090,6 @@
                     "verbb\\base\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5101,20 +5100,20 @@
                 }
             ],
             "description": "Common utilities and building-blocks for Verbb plugins for Craft CMS.",
-            "time": "2020-01-23T22:22:44+00:00"
+            "time": "2020-04-14T23:40:29+00:00"
         },
         {
             "name": "verbb/knock-knock",
-            "version": "1.2.4.2",
+            "version": "1.2.6",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/knock-knock/zipball/ba18140bcb8ccd5c8ad4a301ed7fcc614a9379dd",
-                "reference": "ba18140bcb8ccd5c8ad4a301ed7fcc614a9379dd",
+                "url": "https://api.github.com/repos/verbb/knock-knock/zipball/c027864a3d8ad0bf059cc3a2b43feb9840f1d4f4",
+                "reference": "c027864a3d8ad0bf059cc3a2b43feb9840f1d4f4",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.4.0",
-                "verbb/base": "^1.0.0"
+                "verbb/base": "^1.0.2"
             },
             "type": "craft-plugin",
             "extra": {
@@ -5152,28 +5151,26 @@
                 "docs": "https://github.com/verbb/knock-knock",
                 "rss": "https://github.com/verbb/knock-knock/commits/v2.atom"
             },
-            "time": "2020-04-01T08:06:09+00:00"
+            "time": "2020-04-16T01:02:29+00:00"
         },
         {
             "name": "verbb/redactor-tweaks",
-            "version": "2.0.2",
+            "version": "2.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/redactor-tweaks/zipball/a2d668ce76d322e5779fbbff5ca11851ae27d1ca",
-                "reference": "a2d668ce76d322e5779fbbff5ca11851ae27d1ca",
+                "url": "https://api.github.com/repos/verbb/redactor-tweaks/zipball/abbcb694da16c149cd81544471441a1a3028fd1b",
+                "reference": "abbcb694da16c149cd81544471441a1a3028fd1b",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0"
+                "craftcms/cms": "^3.0.0",
+                "verbb/base": "^1.0.2"
             },
             "type": "craft-plugin",
             "extra": {
                 "name": "Redactor Tweaks",
                 "handle": "redactor-tweaks",
-                "description": "A small Craft CMS that provides some tweaks to the default Redactor II Rich Text fieldtype.",
-                "schemaVersion": "1.0.0",
-                "hasCpSettings": false,
-                "hasCpSection": false,
+                "description": "A small Craft CMS plugin that provides some tweaks to the default Redactor II Rich Text fieldtype.",
                 "changelogUrl": "https://raw.githubusercontent.com/verbb/redactor-tweaks/craft-3/CHANGELOG.md",
                 "class": "verbb\\redactortweaks\\RedactorTweaks"
             },
@@ -5191,7 +5188,7 @@
                     "homepage": "https://verbb.io"
                 }
             ],
-            "description": "A small Craft CMS that provides some tweaks to the default Redactor II Rich Text fieldtype.",
+            "description": "A small Craft CMS plugin that provides some tweaks to the default Redactor II Rich Text fieldtype.",
             "keywords": [
                 "cms",
                 "craft",
@@ -5206,7 +5203,7 @@
                 "docs": "https://github.com/verbb/redactor-tweaks",
                 "rss": "https://github.com/verbb/redactor-tweaks/commits/v2.atom"
             },
-            "time": "2018-07-10T03:53:00+00:00"
+            "time": "2020-04-16T01:08:47+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

@@ -14,8 +14,8 @@
     "putyourlightson/craft-untransform": "1.0.1",
     "rias/craft-colour-swatches": "1.2.3",
     "rias/craft-position-fieldtype": "1.0.14",
-    "verbb/knock-knock": "1.2.4.2",
-    "verbb/redactor-tweaks": "2.0.2",
+    "verbb/knock-knock": "1.2.6",
+    "verbb/redactor-tweaks": "2.0.4",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "autoload": {

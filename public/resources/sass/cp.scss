@@ -2,11 +2,17 @@
 @import 'redactor-tailwind';
 @import 'redactor';
 
-$color-1: #064e0a;
-$color-2: #1b7021;
-$color-3: #388e3e;
-$color-4: #61af66;
-$color-5: #94ce98;
+$color-1: #742A2A;
+$color-2: #9B2C2C;
+$color-3: #C53030; // <-- Main brand color
+$color-4: #E53E3E;
+$color-5: #FFF5F5;
+
+//$color-1: #22543D;
+//$color-2: #276749;
+//$color-3: #2F855A; // <-- Main brand color
+//$color-4: #38A169;
+//$color-5: #F0FFF4;
 
 // Login page
 body.login {
@@ -27,41 +33,61 @@ body.login {
 // Sidebar
 #global-sidebar {
   background: $color-3;
-}
-#global-sidebar a {
-  color: $color-5;
-}
-#global-sidebar > a:hover,
-#global-sidebar > a.active,
-#global-sidebar > a:active,
-#global-sidebar :not(.has-subnav) > a:hover,
-#global-sidebar :not(.has-subnav) > a.active,
-#global-sidebar :not(.has-subnav) > a:active {
-  color: $color-4;
-  background-color: $color-2 !important;
-}
-#global-sidebar :not(.has-subnav) > a.sel {
-  background-color: $color-1 !important;
-}
-#global-sidebar #system-info {
-  background: $color-3;
-  //background-image: url('/resources/images/logo-che-white.png') !important;
-  background-position: center center !important;
-  background-size: 190px auto !important;
-  background-repeat: no-repeat;
-  height: 35px;
-  //text-indent: -9999px;
-}
-#global-sidebar #system-info:focus,
-#global-sidebar #system-info:hover {
-  background-color: $color-2 !important;
-}
-#global-sidebar #system-info #site-icon,
-#global-sidebar #system-info #system-name {
-  display: none;
+  a {
+    color: $color-5;
+  }
+  > a,
+  :not(.has-subnav) > a {
+    &:hover,
+    &.active,
+    &:active {
+      color: $color-4;
+      background-color: $color-2 !important;
+    }
+  }
+  :not(.has-subnav) > a.sel {
+    background-color: $color-1 !important;
+  }
+
+  #system-info {
+    background: $color-3;
+    //background-image: url('/resources/images/logo-che-white.png') !important;
+    background-position: center center !important;
+    background-size: 190px auto !important;
+    background-repeat: no-repeat;
+    height: 35px;
+    //text-indent: -9999px;
+    &:focus,
+    &:hover {
+      background-color: $color-2 !important;
+    }
+    #site-icon,
+    #system-name {
+      display: none;
+    }
+  }
 }
 
 // Hide the "Updates Available" badge
 li#nav-utilities a .badge {
   display: none;
+}
+
+// Buttons
+.btn.submit {
+  // Default color
+  color: $color-5 !important;
+  background-color: $color-3 !important;
+  &:not(.disabled):not(.inactive) {
+    // Hover color
+    &:hover,
+    &.hover {
+      background-color: $color-2 !important;
+    }
+    // Active color
+    &:active,
+    &.active {
+      background-color: $color-1 !important;
+    }
+  }
 }

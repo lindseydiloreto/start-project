@@ -2,13 +2,10 @@
 {% set title = 'Hello' %}
 
 {% block content %}
-    <div class="bg-orange-100 max-w-screen-lg mx-auto py-4">
+{#    <h1 class="font-bold text-3xl">Home</h1>#}
+{#    <div>Panel of three column CTAs</div>#}
+{#    <div>Panel of video embed</div>#}
+{#    <div>Panel of two column text</div>#}
 
-        <h1 class="font-bold text-3xl">Home</h1>
-        <div>Panel of three column CTAs</div>
-        <div>Panel of video embed</div>
-        <div>Panel of two column text</div>
-
-        {% include '_panels' with {'matrix': entry.panels} only %}
-    </div>
+    {% include '_panels' with {'matrix': entry.panels} only %}
 {% endblock %}

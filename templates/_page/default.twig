@@ -2,8 +2,6 @@
 {% set title = entry.title %}
 
 {% block content %}
-    <div class="bg-orange-100 max-w-screen-lg mx-auto py-4">
-        <h1 class="font-bold text-3xl">{{ entry.title }}</h1>
-        {% include '_panels' with {'matrix': entry.panels} only %}
-    </div>
+    <h1 class="font-bold text-3xl">{{ entry.title }}</h1>
+    {% include '_panels' with {'matrix': entry.panels} only %}
 {% endblock %}

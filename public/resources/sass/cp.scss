@@ -2,21 +2,19 @@
 @import 'redactor-tailwind';
 @import 'redactor';
 
-$color-1: #742A2A;
-$color-2: #9B2C2C;
-$color-3: #C53030; // <-- Main brand color
-$color-4: #E53E3E;
-$color-5: #FFF5F5;
+// Main brand color
+$brand-color: #9B2C2C;
 
-//$color-1: #22543D;
-//$color-2: #276749;
-//$color-3: #2F855A; // <-- Main brand color
-//$color-4: #38A169;
-//$color-5: #F0FFF4;
+// Automatically generate a CP theme
+$theme-1: darken($brand-color, 13%);
+$theme-2: darken($brand-color, 8%);
+$theme-3: $brand-color;
+$theme-4: lighten($brand-color, 7%);
+$theme-5: lighten($brand-color, 63%);
 
 // Login page
 body.login {
-  background: $color-3;
+  background: $theme-3;
 }
 #login-form h1 {
   //background: url('/resources/images/logo-che-white.png') 0 0 / 100% auto no-repeat;
@@ -27,30 +25,30 @@ body.login {
 }
 #password-fields,
 #forgot-password {
-  color: $color-5 !important;
+  color: $theme-5 !important;
 }
 
 // Sidebar
 #global-sidebar {
-  background: $color-3;
+  background: $theme-3;
   a {
-    color: $color-5;
+    color: $theme-5;
   }
   > a,
   :not(.has-subnav) > a {
     &:hover,
     &.active,
     &:active {
-      color: $color-4;
-      background-color: $color-2 !important;
+      color: $theme-4;
+      background-color: $theme-2 !important;
     }
   }
   :not(.has-subnav) > a.sel {
-    background-color: $color-1 !important;
+    background-color: $theme-1 !important;
   }
 
   #system-info {
-    background: $color-3;
+    background: $theme-3;
     //background-image: url('/resources/images/logo-che-white.png') !important;
     background-position: center center !important;
     background-size: 190px auto !important;
@@ -59,11 +57,14 @@ body.login {
     //text-indent: -9999px;
     &:focus,
     &:hover {
-      background-color: $color-2 !important;
+      background-color: $theme-2 !important;
     }
     #site-icon,
     #system-name {
-      display: none;
+      //display: none;
+      h2:after {
+        background-image: none;
+      }
     }
   }
 }
@@ -76,18 +77,18 @@ li#nav-utilities a .badge {
 // Buttons
 .btn.submit {
   // Default color
-  color: $color-5 !important;
-  background-color: $color-3 !important;
+  color: $theme-5 !important;
+  background-color: $theme-3 !important;
   &:not(.disabled):not(.inactive) {
     // Hover color
     &:hover,
     &.hover {
-      background-color: $color-2 !important;
+      background-color: $theme-2 !important;
     }
     // Active color
     &:active,
     &.active {
-      background-color: $color-1 !important;
+      background-color: $theme-1 !important;
     }
   }
 }

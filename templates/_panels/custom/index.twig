@@ -1,6 +1,12 @@
 {% set custom = panel.panel.one() %}
 {% if custom %}
     <div class="panel-custom pt-3 px-5 pb-4">
-        {% include ["_panels/custom/#{custom.type.handle}",'_panels/custom/fallback'] with {'custom': custom} only %}
+        {% include [
+                "_panels/custom/#{custom.type.handle}",
+                '_panels/custom/fallback'
+            ] with {
+                'custom': custom
+            } only
+        %}
     </div>
 {% endif %}

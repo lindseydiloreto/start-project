@@ -6,45 +6,55 @@
 $brand-color: #9B2C2C;
 
 // Automatically generate a CP theme
-$theme-1: darken($brand-color, 13%);
-$theme-2: darken($brand-color, 8%);
+$theme-1: lighten($brand-color, 63%);
+$theme-2: lighten($brand-color, 7%);
 $theme-3: $brand-color;
-$theme-4: lighten($brand-color, 7%);
-$theme-5: lighten($brand-color, 63%);
+$theme-4: darken($brand-color, 8%);
+$theme-5: darken($brand-color, 13%);
 
 // Login page
 body.login {
   background: $theme-3;
 }
-#login-form h1 {
-  //background: url('/resources/images/logo-che-white.png') 0 0 / 100% auto no-repeat;
-  //text-indent: -9999px;
-  width: 100%;
-  height: 70px;
-  display: block;
+#login-form {
+  h1 {
+    //background: url('/resources/images/logo-che-white.png') 0 0 / 100% auto no-repeat;
+    //text-indent: -9999px;
+    width: 100%;
+    height: 70px;
+    display: block;
+  }
+  .btn.submit {
+    color: $theme-1 !important;
+    background-color: $theme-4 !important;
+    &:not(.disabled):not(.inactive) {
+      &:hover,  &.hover  {background-color: $theme-5 !important;}
+      &:active, &.active {background-color: $theme-2 !important;}
+    }
+  }
 }
 #password-fields,
 #forgot-password {
-  color: $theme-5 !important;
+  color: $theme-1 !important;
 }
 
 // Sidebar
 #global-sidebar {
   background: $theme-3;
   a {
-    color: $theme-5;
+    color: $theme-1;
   }
   > a,
   :not(.has-subnav) > a {
     &:hover,
     &.active,
     &:active {
-      color: $theme-4;
-      background-color: $theme-2 !important;
+      color: $theme-2;
+      background-color: $theme-4 !important;
     }
   }
   :not(.has-subnav) > a.sel {
-    background-color: $theme-1 !important;
+    background-color: $theme-5 !important;
   }
 
   #system-info {
@@ -57,7 +67,7 @@ body.login {
     //text-indent: -9999px;
     &:focus,
     &:hover {
-      background-color: $theme-2 !important;
+      background-color: $theme-4 !important;
     }
     #site-icon,
     #system-name {
@@ -76,19 +86,10 @@ li#nav-utilities a .badge {
 
 // Buttons
 .btn.submit {
-  // Default color
-  color: $theme-5 !important;
+  color: $theme-1 !important;
   background-color: $theme-3 !important;
   &:not(.disabled):not(.inactive) {
-    // Hover color
-    &:hover,
-    &.hover {
-      background-color: $theme-2 !important;
-    }
-    // Active color
-    &:active,
-    &.active {
-      background-color: $theme-1 !important;
-    }
+    &:hover,  &.hover  {background-color: $theme-4 !important;}
+    &:active, &.active {background-color: $theme-5 !important;}
   }
 }

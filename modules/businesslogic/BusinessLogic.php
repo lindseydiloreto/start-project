@@ -5,8 +5,13 @@ use Craft;
 use craft\elements\Category;
 use craft\elements\Entry;
 use craft\elements\User;
+use craft\events\RegisterComponentTypesEvent;
 use craft\events\RegisterElementSourcesEvent;
+use craft\events\RegisterTemplateRootsEvent;
+use craft\services\Fields;
 use craft\web\twig\variables\CraftVariable;
+use craft\web\View;
+use modules\businesslogic\fields\Sidebars;
 use modules\businesslogic\services\Example;
 use modules\businesslogic\variables\BusinessLogicVariable;
 use modules\businesslogic\web\twig\Extension;
@@ -41,25 +46,19 @@ class BusinessLogic extends Module
         }
 
         // Configure everything
-        $this->_registerServices();
         $this->_registerVariables();
+        $this->_registerFieldTypes();
+//        $this->_registerServices();
 //        $this->_registerTemplateHooks();
         $this->_registerTwigExtension();
+        $this->_registerTemplateDirectory();
 
         $this->_modifyEntrySources();
 //        $this->_removeRedactorLinks();
         $this->_showTotals();
     }
 
-    /**
-     * Register services.
-     */
-    private function _registerServices()
-    {
-        $this->setComponents([
-            'example' => Example::class,
-        ]);
-    }
+    // ================================================================================ //
 
     /**
      * Register variables.
@@ -76,6 +75,30 @@ class BusinessLogic extends Module
         );
     }
 
+    /**
+     * Register field types.
+     */
+    private function _registerFieldTypes()
+    {
+        Event::on(
+            Fields::class,
+            Fields::EVENT_REGISTER_FIELD_TYPES,
+            static function (RegisterComponentTypesEvent $event) {
+                $event->types[] = Sidebars::class;
+            }
+        );
+    }
+
+//    /**
+//     * Register services.
+//     */
+//    private function _registerServices()
+//    {
+//        $this->setComponents([
+//            'example' => Example::class,
+//        ]);
+//    }
+
 //    /**
 //     * Initialize template hooks.
 //     */
@@ -91,6 +114,23 @@ class BusinessLogic extends Module
     private function _registerTwigExtension()
     {
         Craft::$app->getView()->registerTwigExtension(new Extension());
+    }
+
+    /**
+     * Register base template directory.
+     */
+    private function _registerTemplateDirectory()
+    {
+        Event::on(
+            View::class,
+            View::EVENT_REGISTER_CP_TEMPLATE_ROOTS,
+            function (RegisterTemplateRootsEvent $event) {
+                $baseDir = $this->getBasePath().DIRECTORY_SEPARATOR.'templates';
+                if (is_dir($baseDir)) {
+                    $event->roots[$this->id] = $baseDir;
+                }
+            }
+        );
     }
 
     // ================================================================================ //

@@ -1,0 +1,17 @@
+<div>
+    A sidebar of news items
+</div>
+
+{# TODO: STILL FORMATTED WITH BOOTSTRAP #}
+
+{#<div class="bg-gray p-4 rounded mb-2">#}
+{#    <h5 class="m-0 p-0">{{ sidebar.title ?? 'Latest News & Articles'|raw }}</h5>#}
+{#</div>#}
+{#<div class="m-0 mb-4 p-0">#}
+{#    {% for article in craft.entries.section('news').limit(5).all() %}#}
+{#        <div class="px-0 py-3 m-0 {{ not loop.last ? 'border-bottom' }}">#}
+{#            <a href="{{ article.url }}" class="more">{{ article.title }}</a>#}
+{#        </div>#}
+{#    {% endfor %}#}
+{#</div>#}
+{#<a href="{{ newUrl('news') }}" class="btn btn-primary d-block mt-4">View All News <i class="fa fa-arrow-right" aria-hidden="true"></i></a>#}

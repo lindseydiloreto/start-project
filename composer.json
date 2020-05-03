@@ -1,6 +1,5 @@
 {
   "require": {
-    "angellco/spoon": "^3.5.0",
     "carlcs/craft-redactorcustomstyles": "3.0.3",
     "craftcms/cms": "3.4.15",
     "craftcms/mailgun": "1.4.2",
@@ -13,7 +12,6 @@
     "putyourlightson/craft-dashboard-begone": "1.0.1",
     "putyourlightson/craft-untransform": "1.0.1",
     "rias/craft-colour-swatches": "1.2.3",
-    "rias/craft-position-fieldtype": "1.0.14",
     "verbb/knock-knock": "1.2.6",
     "verbb/redactor-tweaks": "2.0.4",
     "vlucas/phpdotenv": "^3.4.0"

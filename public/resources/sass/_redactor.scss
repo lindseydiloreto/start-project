@@ -1,23 +1,79 @@
-// Reset Craft CP overrides
-.input .redactor-styles {
-  h1, h2, h3, h4, h5, h6 {
-    margin: inherit;
-    font-weight: inherit;
-    font-size: inherit;
-    line-height: 1.5;
-  }
+// Customized to match the front-end
+@mixin h2() {
+  color: #489075;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+}
+@mixin h3() {
+  color: #267356;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+}
+@mixin h4() {
+  color: #0e563b;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+}
+@mixin h5() {
+  color: #003923;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
 }
 
 // Format items in dropdown menu
 .redactor-dropdown {
-  .redactor-dropdown-item-header {
-    color: #e53e3e;
-    font-size: 1.5rem;
-    font-weight: 600;
+  .redactor-dropdown-item-h2 {
+    @include h2();
   }
-  .redactor-dropdown-item-subheader {
-    color: #3182ce;
-    font-size: 1.125rem;
-    font-weight: 600;
+  .redactor-dropdown-item-h3 {
+    @include h3();
   }
+  .redactor-dropdown-item-h4 {
+    @include h4();
+  }
+  .redactor-dropdown-item-h5 {
+    @include h5();
+  }
+}
+
+// Reset Craft CP overrides
+.input .redactor-styles {
+  // Define h* tags
+  h2, h3, h4, h5, h6 {
+    margin: inherit !important;
+    font-weight: inherit !important;
+    font-size: inherit !important;
+    line-height: 1.5 !important;
+  }
+  h2 {
+    @include h2();
+    line-height: 1em !important;
+    margin-bottom: 1rem !important;
+  }
+  h3 {
+    @include h3();
+    margin-bottom: .5rem !important;
+  }
+  ul {
+    margin-top: 0 !important;
+    margin-bottom: 1.2rem !important;
+  }
+
+  // Float images
+  figure.float-left {
+    margin-right: 16px;
+    margin-bottom: 20px;
+  }
+  figure.float-right {
+    margin-left: 16px;
+    margin-bottom: 20px;
+  }
+  figure.clearfix {
+    text-align: center;
+    margin-bottom: 20px;
+    img {
+      margin: 0 auto;
+    }
+  }
+
 }

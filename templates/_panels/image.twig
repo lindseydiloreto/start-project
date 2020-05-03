@@ -1,8 +1,13 @@
-{% set image = true %}
-{#{% set image = panel.image.one() %}#}
+{# Get the image asset #}
+{% set image = panel.image.one() %}
+
+{# Transform image if not "Full Width" #}
+{% set isFullWidth = ('fullWidth' == panel.width.value) %}
+{% set transform = (isFullWidth ? null : 'panelCentered') %}
+
+{# If the image exists, render it #}
 {% if image %}
     <div class="panel-image pt-5 pb-4">
-{#        {{ image.url }}#}
-        <img src="http://placekitten.com/820/340" alt="" class="mx-auto shadow-lg border border-gray-600">
+        <img src="{{ image.url(transform) }}" class="mx-auto shadow-lg border border-gray-600" alt="">
     </div>
 {% endif %}

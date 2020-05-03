@@ -22,20 +22,32 @@
   ],
   "formatting": [],
   "formattingAdd": {
-    "header": {
-      "title": "Header",
+    "h2": {
+      "title": "Header 2",
       "api": "module.block.format",
       "args": {
-        "tag": "h2",
-        "class": "font-bold text-2xl text-red-600"
+        "tag": "h2"
       }
     },
-    "subheader": {
-      "title": "Subheader",
+    "h3": {
+      "title": "Header 3",
       "api": "module.block.format",
       "args": {
-        "tag": "h3",
-        "class": "font-bold text-lg text-blue-600"
+        "tag": "h3"
+      }
+    },
+    "h4": {
+      "title": "Header 4",
+      "api": "module.block.format",
+      "args": {
+        "tag": "h4"
+      }
+    },
+    "h5": {
+      "title": "Header 5",
+      "api": "module.block.format",
+      "args": {
+        "tag": "h5"
       }
     },
     "paragraph": {
@@ -47,9 +59,9 @@
     }
   },
   "imagePosition": {
-    "left": "image-left",
-    "right": "image-right",
-    "center": "image-center"
+    "left": "float-left",
+    "right": "float-right",
+    "center": "clearfix"
   },
   "clips": [
     ["Small Button", "<a class=\"text-sm bg-blue-500 hover:bg-blue-700 text-white hover:text-white font-bold py-1 px-4 mx-1 my-1 inline-block cursor-pointer rounded shadow\" href=\"#\">Small Button</a>"],

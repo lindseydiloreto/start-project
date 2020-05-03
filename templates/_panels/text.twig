@@ -1,3 +1,24 @@
-<div class="panel-text px-5">
+{# Calculate padding #}
+{% switch panel.padding.value %}
+    {% case 'heavy' %}
+        {% set padding = 'p-4' %}
+    {% case 'light' %}
+        {% set padding = 'p-2' %}
+    {% default %} {# none #}
+        {% set padding = '' %}
+{% endswitch %}
+
+{# Calculate margin #}
+{% switch panel.margin.value %}
+    {% case 'heavy' %}
+        {% set margin = 'my-4' %}
+    {% case 'light' %}
+        {% set margin = 'my-3' %}
+    {% default %} {# none #}
+        {% set margin = '' %}
+{% endswitch %}
+
+{# Render the text #}
+<div class="panel-text px-5 {{ "#{padding} #{margin}" }}">
     {{ panel.text|raw }}
 </div>

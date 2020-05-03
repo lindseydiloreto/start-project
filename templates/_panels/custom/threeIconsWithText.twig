@@ -1,3 +1,28 @@
-<div class="p-3 border-2 text-center font-bold bg-green-100 rounded">
-    {{ custom.title }} ({{ custom.type.name }})
-</div>
+
+{# DISCLAIMER: STILL FORMATTED WITH BOOTSTRAP #}
+
+{#{% set ctas = custom.iconCtas.all() %}#}
+{#{% if ctas %}#}
+{#    <div class="container featured-icons">#}
+{#        <div class="row text-center mt-5">#}
+
+{#            {% for block in ctas %}#}
+{#                {% set icon = block.icon.one() %}#}
+{#                {% set circle = "background-color: #{block.circleColor};" %}#}
+{#                <div class="col-12 col-md-4 mb-4 px-lg-4 mb-5">#}
+{#                    {% if icon %}#}
+{#                        <div class="rounded-circle icon-circle p-3" style="{{ circle }}"><img src="{{ icon.url }}" width="60" height="60" class="" alt="icon" /></div>#}
+{#                    {% endif %}#}
+{#                    <h2 class="h1 mt-4 underline">{{ block.label }}</h2>#}
+{#                    <div class="text">{{ block.description|raw }}</div>#}
+{#                    {% if block.href %}#}
+{#                        <a href="{{ block.href }}" class="btn btn-primary mt-3" {{ block.newTab ? 'target="_blank"'|raw }}>#}
+{#                            Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i>#}
+{#                        </a>#}
+{#                    {% endif %}#}
+{#                </div>#}
+{#            {% endfor %}#}
+
+{#        </div>#}
+{#    </div>#}
+{#{% endif %}#}

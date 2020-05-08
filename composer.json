@@ -1,8 +1,8 @@
 {
   "require": {
     "carlcs/craft-redactorcustomstyles": "3.0.3",
-    "craftcms/cms": "3.4.17.1",
-    "craftcms/mailgun": "1.4.2",
+    "craftcms/cms": "3.4.18",
+    "craftcms/mailgun": "1.4.3",
     "craftcms/redactor": "2.6.1",
     "doublesecretagency/craft-cpcss": "2.2.1",
     "doublesecretagency/craft-matrixcolors": "2.0.1",

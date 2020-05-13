@@ -14,13 +14,12 @@ return [
         'limitAutoSlugsToAscii'   => true,
         'convertFilenamesToAscii' => true,
 
-        'cacheDuration' => 'P30D', // Cache for 30 days
+        'cacheDuration'      => 'P30D', // Cache for 30 days
+        'softDeleteDuration' => 'P6M',  // Keep soft-deleted items for 6 months
 
         'userSessionDuration'           => 'P1D', // Stay logged in for 1 day
         'rememberedUserSessionDuration' => 'P1Y', // Stay logged in for 1 year ("Remember Me")
         'verificationCodeDuration'      => 'P2W', // Verification codes expire after 2 weeks
-
-        'softDeleteDuration' => 'P6M', // Keep soft-deleted items for 6 months
 
         'defaultSearchTermOptions' => ['subLeft' => true],
 

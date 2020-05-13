@@ -36,7 +36,7 @@
       "@php craft clear-caches/all"
     ],
     "sync": [
-      "composer install && npm install && npm run dev"
+      "composer install && npm install --no-fund && npm run dev"
     ],
     "nuke": [
       "rm -rf vendor/ && rm composer.lock && composer clear-cache && composer update"

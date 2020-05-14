@@ -10,6 +10,7 @@ return [
         'useEmailAsUsername'   => true,
         'omitScriptNameInUrls' => true,
         'allowUpdates'         => false,
+        'enableGql'            => false,
 
         'limitAutoSlugsToAscii'   => true,
         'convertFilenamesToAscii' => true,

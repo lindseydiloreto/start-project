@@ -1,12 +1,65 @@
-<div>
-    A sidebar of news items
+<script>
+    var data = {
+        entries: [
+            {
+                id: 122,
+                title: 'The Deathly Hallows',
+                url: '/news/the-deathly-hallows',
+                description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac porttitor ex. In vitae nisi vitae augue accumsan pharetra ac sed nisi. Nullam scelerisque, libero nec egestas iaculis, lectus justo placerat lorem, et laoreet ante lectus at ipsum. Aenean commodo placerat tortor vitae ornare.</p>',
+            },
+            {
+                id: 113,
+                title: 'The Goblet of Fire',
+                url: '/news/the-goblet-of-fire',
+                description: '<p>Ut hendrerit turpis cursus sem varius, vitae cursus ante suscipit. In nec condimentum tellus, vel congue leo. Pellentesque diam orci, venenatis eu velit commodo, gravida aliquet odio. Proin ac elit in mi vestibulum molestie. Fusce vitae nisl at est iaculis finibus sit amet et diam.</p>',
+            },
+            {
+                id: 116,
+                title: 'The Order of the Phoenix',
+                url: '/news/the-order-of-the-phoenix',
+                description: '<p>Integer non elementum quam, in ultrices magna. Duis orci arcu, venenatis id pulvinar sit amet, mollis at eros. Integer lorem ligula, lacinia ac suscipit ac, vestibulum blandit mauris. Mauris accumsan, ligula id dictum facilisis, felis erat interdum mi, in tempus urna lorem id tortor. Aliquam erat volutpat.</p>',
+            },
+            {
+                id: 119,
+                title: 'The Half-Blood Prince',
+                url: '/news/the-half-blood-prince',
+                description: '<p>Donec nec vehicula risus, id fermentum nisi. Praesent non mollis enim. Cras ultrices velit sem, ut euismod orci suscipit et. Suspendisse id lacus hendrerit, dictum ante a, bibendum elit. Ut semper libero enim. Nunc nec quam vel quam ultricies ultrices. Donec hendrerit vel elit ut feugiat.</p>',
+            },
+            {
+                id: 107,
+                title: 'The Chamber of Secrets',
+                url: '/news/the-chamber-of-secrets',
+                description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac porttitor ex. In vitae nisi vitae augue accumsan pharetra ac sed nisi. Nullam scelerisque, libero nec egestas iaculis, lectus justo placerat lorem, et laoreet ante lectus at ipsum. Aenean commodo placerat tortor vitae ornare.</p>',
+            },
+            {
+                id: 110,
+                title: 'The Prisoner of Azkaban',
+                url: '/news/the-prisoner-of-azkaban',
+                description: '<p>Ut hendrerit turpis cursus sem varius, vitae cursus ante suscipit. In nec condimentum tellus, vel congue leo. Pellentesque diam orci, venenatis eu velit commodo, gravida aliquet odio. Proin ac elit in mi vestibulum molestie. Fusce vitae nisl at est iaculis finibus sit amet et diam.</p>',
+            },
+            {
+                id: 104,
+                title: 'The Sorcerer\'s Stone',
+                url: '/news/the-sorcerers-stone',
+                description: '<p>Integer non elementum quam, in ultrices magna. Duis orci arcu, venenatis id pulvinar sit amet, mollis at eros. Integer lorem ligula, lacinia ac suscipit ac, vestibulum blandit mauris. Mauris accumsan, ligula id dictum facilisis, felis erat interdum mi, in tempus urna lorem id tortor. Aliquam erat volutpat.</p>',
+            },
+        ]
+    };
+</script>
+
+<div class="px-5 py-1">
+    <h2 class="font-bold text-xl">Latest News</h2>
+    <div x-data="data">
+        <ul class="list-disc list-inside">
+            <template x-for="entry in entries" :key="entry">
+                <li><a :href="entry.url" x-text="entry.title"></a></li>
+            </template>
+        </ul>
+    </div>
 </div>
 
 {# TODO: STILL FORMATTED WITH BOOTSTRAP #}
 
-{#<div class="bg-gray p-4 rounded mb-2">#}
-{#    <h5 class="m-0 p-0">{{ sidebar.title ?? 'Latest News & Articles'|raw }}</h5>#}
-{#</div>#}
 {#<div class="m-0 mb-4 p-0">#}
 {#    {% for article in craft.entries.section('news').limit(5).all() %}#}
 {#        <div class="px-0 py-3 m-0 {{ not loop.last ? 'border-bottom' }}">#}

@@ -1,0 +1,8 @@
+{% set image = entry.heroImage.one() %}
+{% if image %}
+    <img
+        src="{{ image.url('panelFull') }}"
+        class=""
+        alt="Primary image"
+    >
+{% endif %}

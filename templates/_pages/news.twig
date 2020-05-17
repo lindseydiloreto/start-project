@@ -1,0 +1,102 @@
+{% extends '_layout' %}
+{% set title = entry.title %}
+
+{% block content %}
+
+    <script>
+        var data = {
+            entries: [
+                {
+                    id: 122,
+                    title: 'The Deathly Hallows',
+                    url: '/news/the-deathly-hallows',
+                    description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac porttitor ex. In vitae nisi vitae augue accumsan pharetra ac sed nisi. Nullam scelerisque, libero nec egestas iaculis, lectus justo placerat lorem, et laoreet ante lectus at ipsum. Aenean commodo placerat tortor vitae ornare.</p>',
+                },
+                {
+                    id: 113,
+                    title: 'The Goblet of Fire',
+                    url: '/news/the-goblet-of-fire',
+                    description: '<p>Ut hendrerit turpis cursus sem varius, vitae cursus ante suscipit. In nec condimentum tellus, vel congue leo. Pellentesque diam orci, venenatis eu velit commodo, gravida aliquet odio. Proin ac elit in mi vestibulum molestie. Fusce vitae nisl at est iaculis finibus sit amet et diam.</p>',
+                },
+                {
+                    id: 116,
+                    title: 'The Order of the Phoenix',
+                    url: '/news/the-order-of-the-phoenix',
+                    description: '<p>Integer non elementum quam, in ultrices magna. Duis orci arcu, venenatis id pulvinar sit amet, mollis at eros. Integer lorem ligula, lacinia ac suscipit ac, vestibulum blandit mauris. Mauris accumsan, ligula id dictum facilisis, felis erat interdum mi, in tempus urna lorem id tortor. Aliquam erat volutpat.</p>',
+                },
+                {
+                    id: 119,
+                    title: 'The Half-Blood Prince',
+                    url: '/news/the-half-blood-prince',
+                    description: '<p>Donec nec vehicula risus, id fermentum nisi. Praesent non mollis enim. Cras ultrices velit sem, ut euismod orci suscipit et. Suspendisse id lacus hendrerit, dictum ante a, bibendum elit. Ut semper libero enim. Nunc nec quam vel quam ultricies ultrices. Donec hendrerit vel elit ut feugiat.</p>',
+                },
+                {
+                    id: 107,
+                    title: 'The Chamber of Secrets',
+                    url: '/news/the-chamber-of-secrets',
+                    description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac porttitor ex. In vitae nisi vitae augue accumsan pharetra ac sed nisi. Nullam scelerisque, libero nec egestas iaculis, lectus justo placerat lorem, et laoreet ante lectus at ipsum. Aenean commodo placerat tortor vitae ornare.</p>',
+                },
+                {
+                    id: 110,
+                    title: 'The Prisoner of Azkaban',
+                    url: '/news/the-prisoner-of-azkaban',
+                    description: '<p>Ut hendrerit turpis cursus sem varius, vitae cursus ante suscipit. In nec condimentum tellus, vel congue leo. Pellentesque diam orci, venenatis eu velit commodo, gravida aliquet odio. Proin ac elit in mi vestibulum molestie. Fusce vitae nisl at est iaculis finibus sit amet et diam.</p>',
+                },
+                {
+                    id: 104,
+                    title: 'The Sorcerer\'s Stone',
+                    url: '/news/the-sorcerers-stone',
+                    description: '<p>Integer non elementum quam, in ultrices magna. Duis orci arcu, venenatis id pulvinar sit amet, mollis at eros. Integer lorem ligula, lacinia ac suscipit ac, vestibulum blandit mauris. Mauris accumsan, ligula id dictum facilisis, felis erat interdum mi, in tempus urna lorem id tortor. Aliquam erat volutpat.</p>',
+                },
+            ]
+        };
+    </script>
+
+    <div class="bg-orange-100 max-w-screen-lg mx-auto py-4">
+
+        {% include '_layout/header/hero' with {'entry': entry} only %}
+
+        <h1 class="font-bold text-3xl">Recent News Articles</h1>
+
+        <div x-data="data">
+            <template x-for="entry in entries" :key="entry">
+                <a :href="entry.url">
+                    <div class="mx-4 my-3 p-6 bg-white rounded-md shadow">
+                        <h3 x-text="entry.title" class="cursor-pointer underline mb-1"></h3>
+                        <div x-html="entry.description"></div>
+                    </div>
+                </a>
+            </template>
+        </div>
+
+    </div>
+
+
+{# FROM CHE #}
+
+{#    #}
+
+{#    #}{# Loop through News articles #}
+{#    <div class="container news-panel pt-4">#}
+{#        <div class="row">#}
+{#            {% for article in craft.entries.section('news').all() %}#}
+{#                {% set image = article.primaryImage.one() %}#}
+{#                {% set src = (image.url('newsThumbnail') ?? "#{resourcesUrl}/images/news-thumb.jpg") %}#}
+
+{#                <div class="col-12 col-md-6 mb-4 {{ loop.index is even ? 'pl-md-4' : 'pr-md-4' }} pb-md-4">#}
+{#                    <a href="{{ article.url }}">#}
+{#                        <img src="{{ src }}" class="img-fluid mb-3 rounded" alt="News Article" />#}
+{#                    </a>#}
+{#                    <h3 class="h2">{{ article.title }}</h3>#}
+{#                    <p>{{ article.excerpt }}</p>#}
+{#                    <a href="{{ article.url }}" class="more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>#}
+{#                </div>#}
+
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+
+{#    {% include '_layout/footer/jobs-cta' %}#}
+
+
+{% endblock %}

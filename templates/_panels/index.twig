@@ -1,6 +1,6 @@
 {% for panel in matrix.all() %}
     {% include
-        "_panels/#{panel.type.handle}"
+        "_panels/standard/#{panel.type.handle}"
         ignore missing
         with {
             'panel': panel

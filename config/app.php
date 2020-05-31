@@ -3,10 +3,19 @@
 use modules\businesslogic\BusinessLogic;
 
 return [
-    'modules' => [
-        'business-logic' => BusinessLogic::class,
+    '*' => [
+        'modules' => [
+            'businesslogic' => BusinessLogic::class,
+        ],
+        'bootstrap' => [
+            'businesslogic',
+        ],
     ],
-    'bootstrap' => [
-        'business-logic',
-    ],
+    'dev' => [
+        'components' => [
+            'deprecator' => [
+                'throwExceptions' => true,
+            ]
+        ]
+    ]
 ];

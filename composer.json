@@ -6,6 +6,7 @@
     "craftcms/redactor": "^2.6",
     "doublesecretagency/craft-cpcss": "^2.2",
     "doublesecretagency/craft-matrixcolors": "^2.0",
+    "hillholliday/craft-user-manual": "^2.0",
     "mmikkel/cp-field-inspect": "^1.1",
     "nystudio107/craft-scripts": "^1.2",
     "nystudio107/craft-twigpack": "^1.2",

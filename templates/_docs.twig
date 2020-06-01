@@ -1,0 +1,11 @@
+<h2>{{ entry.title }}</h2>
+
+{% for panel in entry.panels.all() %}
+    {% include
+        "_panels/standard/#{panel.type.handle}"
+        ignore missing
+        with {
+            'panel': panel
+        } only
+    %}
+{% endfor %}

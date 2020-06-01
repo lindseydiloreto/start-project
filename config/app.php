@@ -3,19 +3,14 @@
 use modules\businesslogic\BusinessLogic;
 
 return [
-    '*' => [
-        'modules' => [
-            'businesslogic' => BusinessLogic::class,
-        ],
-        'bootstrap' => [
-            'businesslogic',
-        ],
+    'modules' => [
+        'businesslogic' => BusinessLogic::class,
     ],
-    'dev' => [
-        'components' => [
-            'deprecator' => [
-                'throwExceptions' => true,
-            ]
-        ]
+    'bootstrap' => [
+        'businesslogic',
+    ],
+    'components' => [
+        // Throw hard errors on deprecation warnings
+        'deprecator' => ['throwExceptions' => YII_DEBUG]
     ]
 ];

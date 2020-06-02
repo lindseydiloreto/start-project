@@ -1,4 +1,7 @@
 {
+  "name": "doublesecret/starter",
+  "version": "1.0.0",
+  "type": "project",
   "require": {
     "carlcs/craft-redactorcustomstyles": "^3.0",
     "craftcms/cms": "^3.4",

@@ -1,0 +1,79 @@
+#!/usr/bin/env php
+<?php
+
+// Prompt user for new information
+function prompt($message, $default = false)
+{
+    // Include default value in message (if it exists)
+    if ($default) {
+        $message = rtrim($message, ': ');
+        $message = "{$message} [{$default}]: ";
+    }
+
+    // Display message prompt
+    fwrite(\STDOUT, $message);
+
+    // Get user response
+    $response = rtrim(fgets(\STDIN), PHP_EOL);
+
+    // If user responded, return their answer
+    if ($response) {
+        return $response;
+    }
+
+    // Return the default value
+    return $default;
+}
+
+// ================================================================================ //
+/**
+ * Automated project setup
+ */
+
+// Collect user information
+$dbUsername = '';
+$dbPassword = '';
+$dbDatabase = prompt('Database: ', 'support_'.time());
+
+// Get current database dump
+$files = glob(__DIR__.'/db/*');
+$sql = ($files ? $files[0] : false);
+
+// Connect to MySQL
+$mysql = new mysqli('127.0.0.1', $dbUsername, $dbPassword);
+
+// If can't connect to MySQL, fail
+if (!$mysql) {
+    $error = mysqli_connect_error();
+    echo "Unable to connect to MySQL: {$error}".PHP_EOL;
+    exit();
+}
+
+// Create a new database
+echo "Creating a new database... ";
+$createdDatabase = (true === $mysql->query("CREATE DATABASE {$dbDatabase}"));
+
+// If couldn't create the database, fail
+if (!$createdDatabase) {
+    $error = mysqli_connect_error();
+    echo PHP_EOL."Error creating database: {$mysql->error}".PHP_EOL;
+    exit();
+}
+
+// Report database creation
+echo "Done. ({$dbDatabase})".PHP_EOL;
+
+// Import the SQL file
+echo "Importing SQL file... ";
+system("mysql --user={$dbUsername} --password={$dbPassword} {$dbDatabase} < {$sql}");
+$filename = basename($sql);
+echo "Done. (/db/{$filename})".PHP_EOL;
+
+// Close MySQL connection
+$mysql->close();
+
+// ================================================================================ //
+
+// CONFIGURE ENV FILE
+
+// OUTPUT FINAL URL

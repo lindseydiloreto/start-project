@@ -1,6 +1,32 @@
 #!/usr/bin/env php
 <?php
 
+// Determine database name based on current path info
+function db_name()
+{
+    // Get current path info
+    $path = str_replace('/Users/lindseydiloreto/Sites/', '', __DIR__);
+    $dir = explode('/', $path);
+
+    // Determine first part of database name
+    switch ($dir[0]) {
+        case 'etc':
+        case 'workflow':
+        case 'doublesecretagency':
+            $primary = '2x';
+            break;
+        default:
+            $primary = $dir[0];
+            break;
+    }
+
+    // Determine second part of database name
+    $secondary = array_pop($dir);
+
+    // Return complete database name
+    return "{$primary}_{$secondary}";
+}
+
 // Prompt user for new information
 function prompt($message, $default = false)
 {
@@ -31,9 +57,9 @@ function prompt($message, $default = false)
  */
 
 // Collect user information
-$dbUsername = '';
-$dbPassword = '';
-$dbDatabase = prompt('Database: ', 'support_'.time());
+$dbUsername = getenv('DB_USERNAME');
+$dbPassword = getenv('DB_PASSWORD');
+$dbDatabase = prompt('Database: ', db_name());
 
 // Get current database dump
 $files = glob(__DIR__.'/db/*');

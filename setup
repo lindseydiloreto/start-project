@@ -27,29 +27,29 @@ function db_name()
     return "{$primary}_{$secondary}";
 }
 
-// Prompt user for new information
-function prompt($message, $default = false)
-{
-    // Include default value in message (if it exists)
-    if ($default) {
-        $message = rtrim($message, ': ');
-        $message = "{$message} [{$default}]: ";
-    }
-
-    // Display message prompt
-    fwrite(\STDOUT, $message);
-
-    // Get user response
-    $response = rtrim(fgets(\STDIN), PHP_EOL);
-
-    // If user responded, return their answer
-    if ($response) {
-        return $response;
-    }
-
-    // Return the default value
-    return $default;
-}
+//// Prompt user for new information
+//function prompt($message, $default = false)
+//{
+//    // Include default value in message (if it exists)
+//    if ($default) {
+//        $message = rtrim($message, ': ');
+//        $message = "{$message} [{$default}]: ";
+//    }
+//
+//    // Display message prompt
+//    fwrite(\STDOUT, $message);
+//
+//    // Get user response
+//    $response = rtrim(fgets(\STDIN), PHP_EOL);
+//
+//    // If user responded, return their answer
+//    if ($response) {
+//        return $response;
+//    }
+//
+//    // Return the default value
+//    return $default;
+//}
 
 // ================================================================================ //
 /**
@@ -59,7 +59,8 @@ function prompt($message, $default = false)
 // Collect user information
 $dbUsername = getenv('DB_USERNAME');
 $dbPassword = getenv('DB_PASSWORD');
-$dbDatabase = prompt('Database: ', db_name());
+$dbDatabase = db_name();
+//$dbDatabase = prompt('Database: ', db_name());
 
 // Get current database dump
 $files = glob(__DIR__.'/db/*');
@@ -82,7 +83,7 @@ $createdDatabase = (true === $mysql->query("CREATE DATABASE {$dbDatabase}"));
 // If couldn't create the database, fail
 if (!$createdDatabase) {
     $error = mysqli_connect_error();
-    echo PHP_EOL."Error creating database: {$mysql->error}".PHP_EOL;
+    echo PHP_EOL.$mysql->error.PHP_EOL;
     exit();
 }
 

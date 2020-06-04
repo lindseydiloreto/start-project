@@ -31,6 +31,7 @@
     }
   },
   "scripts": {
+    "post-create-project-cmd": ["@php setup"],
     "post-install-cmd": ["@craft-update"],
     "post-update-cmd": ["@craft-update"],
     "craft-update": [

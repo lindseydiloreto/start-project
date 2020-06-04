@@ -12,28 +12,38 @@ if (file_exists('.env')) {
 
 // ================================================================================ //
 
-setupDatabase();
-setupEnvFile();
+// Collect user information
+$config = [
+    'username' => getenv('SETUP_USERNAME'),
+    'password' => getenv('SETUP_PASSWORD'),
+    'database' => getDbName(),
+    // 'database' => prompt('Database: ', getDbName()),
 
-// OUTPUT FINAL URL
+    'siteUrl'  => 'http://'.basename(__DIR__).'.test',
+    'sitePath' => __DIR__.'/public',
+];
 
+setupDatabase($config);
+setupEnvFile($config);
+setupNpm();
+
+// Output a link to the control panel
+fwrite(\STDOUT, PHP_EOL.'Hooray!! Your new site has been created...'.PHP_EOL);
+fwrite(\STDOUT, $config['siteUrl'].'/cp'.PHP_EOL.PHP_EOL);
+
+// All done!
+exit();
 
 // ================================================================================ //
 
-function setupDatabase()
+function setupDatabase($config)
 {
-    // Collect user information
-    $dbUsername = getenv('SETUP_USERNAME');
-    $dbPassword = getenv('SETUP_PASSWORD');
-    $dbDatabase = db_name();
-    //$dbDatabase = prompt('Database: ', db_name());
-
     // Get current database dump
     $files = glob(__DIR__.'/db/*');
     $sql = ($files ? $files[0] : false);
 
     // Connect to MySQL
-    $mysql = new mysqli('127.0.0.1', $dbUsername, $dbPassword);
+    $mysql = new mysqli('127.0.0.1', $config['username'], $config['password']);
 
     // If can't connect to MySQL, fail
     if (!$mysql) {
@@ -44,21 +54,20 @@ function setupDatabase()
 
     // Create a new database
     echo "Creating a new database... ";
-    $createdDatabase = (true === $mysql->query("CREATE DATABASE {$dbDatabase}"));
+    $createdDatabase = (true === $mysql->query("CREATE DATABASE {$config['database']}"));
 
     // If couldn't create the database, fail
     if (!$createdDatabase) {
-        $error = mysqli_connect_error();
         echo PHP_EOL.$mysql->error.PHP_EOL;
         exit();
     }
 
     // Report database creation
-    echo "Done. ({$dbDatabase})".PHP_EOL;
+    echo "Done. ({$config['database']})".PHP_EOL;
 
     // Import the SQL file
     echo "Importing SQL file... ";
-    system("mysql --user={$dbUsername} --password={$dbPassword} {$dbDatabase} < {$sql}");
+    system("mysql --user={$config['username']} --password={$config['password']} {$config['database']} < {$sql}");
     $filename = basename($sql);
     echo "Done. (/db/{$filename})".PHP_EOL;
 
@@ -66,17 +75,41 @@ function setupDatabase()
     $mysql->close();
 }
 
-function setupEnvFile()
+function setupEnvFile($config)
 {
+    // Copy example .env file
+    copy('.env.example', '.env');
 
-// CONFIGURE ENV FILE
+    // Get all existing settings from the .env file
+    $settings = file_get_contents('.env');
 
+    // Get replacement strings
+    $replacements = getEnvReplacements($config);
+
+    // Update all relevant settings
+    foreach ($replacements as $key => $val) {
+        $settings = str_replace($key, $val, $settings);
+    }
+
+    // Save new settings back to the .env file
+    file_put_contents('.env', $settings);
+
+    // Generate new security key
+    system('./craft setup/security-key');
+}
+
+// Prep NPM and run initial front-end build
+function setupNpm()
+{
+    system('npm install');
+    system('npm audit fix');
+    system('npm run dev');
 }
 
 // ================================================================================ //
 
-// Determine database name based on current path info
-function db_name()
+// Determine database name based on current system and path info
+function getDbName()
 {
     // If not Lindsey's machine, just return current folder name
     if ('LD' !== getenv('SETUP_PATTERN')) {
@@ -105,6 +138,35 @@ function db_name()
     // Return specially formatted database name
     return "{$primary}_{$secondary}";
 }
+
+function getEnvReplacements($config)
+{
+    // Strings to be updated in .env file
+    $replacements = [
+        // Enable test email address, point test emails to Lindsey
+        '#CONFIG_TESTTOEMAILADDRESS="support@doublesecretagency.com"' =>
+        'CONFIG_TESTTOEMAILADDRESS="lindsey@doublesecretagency.com"',
+    ];
+
+    // Updated settings for .env file
+    $updatedValues = [
+        'DB_USER'         => $config['username'],
+        'DB_PASSWORD'     => $config['password'],
+        'DB_DATABASE'     => $config['database'],
+        'CONFIG_SITEURL'  => $config['siteUrl'],
+        'CONFIG_SITEPATH' => $config['sitePath'],
+    ];
+
+    // Append all updated values
+    foreach ($updatedValues as $key => $val) {
+        $replacements["{$key}=\"\""] = "{$key}=\"{$val}\"";
+    }
+
+    // Return strings to be updated
+    return $replacements;
+}
+
+// ================================================================================ //
 
 //// Prompt user for new information
 //function prompt($message, $default = false)

@@ -1,10 +1,89 @@
 #!/usr/bin/env php
 <?php
+/**
+ * Automated project setup
+ */
+
+// If .env file already exists, exit immediately
+if (file_exists('.env')) {
+    fwrite(\STDOUT, 'Aborting setup, the .env file already exists!'.PHP_EOL);
+    exit();
+}
+
+// ================================================================================ //
+
+setupDatabase();
+setupEnvFile();
+
+// OUTPUT FINAL URL
+
+
+// ================================================================================ //
+
+function setupDatabase()
+{
+    // Collect user information
+    $dbUsername = getenv('SETUP_USERNAME');
+    $dbPassword = getenv('SETUP_PASSWORD');
+    $dbDatabase = db_name();
+    //$dbDatabase = prompt('Database: ', db_name());
+
+    // Get current database dump
+    $files = glob(__DIR__.'/db/*');
+    $sql = ($files ? $files[0] : false);
+
+    // Connect to MySQL
+    $mysql = new mysqli('127.0.0.1', $dbUsername, $dbPassword);
+
+    // If can't connect to MySQL, fail
+    if (!$mysql) {
+        $error = mysqli_connect_error();
+        echo "Unable to connect to MySQL: {$error}".PHP_EOL;
+        exit();
+    }
+
+    // Create a new database
+    echo "Creating a new database... ";
+    $createdDatabase = (true === $mysql->query("CREATE DATABASE {$dbDatabase}"));
+
+    // If couldn't create the database, fail
+    if (!$createdDatabase) {
+        $error = mysqli_connect_error();
+        echo PHP_EOL.$mysql->error.PHP_EOL;
+        exit();
+    }
+
+    // Report database creation
+    echo "Done. ({$dbDatabase})".PHP_EOL;
+
+    // Import the SQL file
+    echo "Importing SQL file... ";
+    system("mysql --user={$dbUsername} --password={$dbPassword} {$dbDatabase} < {$sql}");
+    $filename = basename($sql);
+    echo "Done. (/db/{$filename})".PHP_EOL;
+
+    // Close MySQL connection
+    $mysql->close();
+}
+
+function setupEnvFile()
+{
+
+// CONFIGURE ENV FILE
+
+}
+
+// ================================================================================ //
 
 // Determine database name based on current path info
 function db_name()
 {
-    // Get current path info
+    // If not Lindsey's machine, just return current folder name
+    if ('LD' !== getenv('SETUP_PATTERN')) {
+        basename(__DIR__);
+    }
+
+    // Get Lindsey's current path info
     $path = str_replace('/Users/lindseydiloreto/Sites/', '', __DIR__);
     $dir = explode('/', $path);
 
@@ -23,7 +102,7 @@ function db_name()
     // Determine second part of database name
     $secondary = array_pop($dir);
 
-    // Return complete database name
+    // Return specially formatted database name
     return "{$primary}_{$secondary}";
 }
 
@@ -50,57 +129,3 @@ function db_name()
 //    // Return the default value
 //    return $default;
 //}
-
-// ================================================================================ //
-/**
- * Automated project setup
- */
-
-// Collect user information
-$dbUsername = getenv('DB_USERNAME');
-$dbPassword = getenv('DB_PASSWORD');
-$dbDatabase = db_name();
-//$dbDatabase = prompt('Database: ', db_name());
-
-// Get current database dump
-$files = glob(__DIR__.'/db/*');
-$sql = ($files ? $files[0] : false);
-
-// Connect to MySQL
-$mysql = new mysqli('127.0.0.1', $dbUsername, $dbPassword);
-
-// If can't connect to MySQL, fail
-if (!$mysql) {
-    $error = mysqli_connect_error();
-    echo "Unable to connect to MySQL: {$error}".PHP_EOL;
-    exit();
-}
-
-// Create a new database
-echo "Creating a new database... ";
-$createdDatabase = (true === $mysql->query("CREATE DATABASE {$dbDatabase}"));
-
-// If couldn't create the database, fail
-if (!$createdDatabase) {
-    $error = mysqli_connect_error();
-    echo PHP_EOL.$mysql->error.PHP_EOL;
-    exit();
-}
-
-// Report database creation
-echo "Done. ({$dbDatabase})".PHP_EOL;
-
-// Import the SQL file
-echo "Importing SQL file... ";
-system("mysql --user={$dbUsername} --password={$dbPassword} {$dbDatabase} < {$sql}");
-$filename = basename($sql);
-echo "Done. (/db/{$filename})".PHP_EOL;
-
-// Close MySQL connection
-$mysql->close();
-
-// ================================================================================ //
-
-// CONFIGURE ENV FILE
-
-// OUTPUT FINAL URL

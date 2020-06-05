@@ -6,9 +6,11 @@ use craft\elements\Category;
 use craft\elements\Entry;
 use craft\elements\User;
 use craft\events\RegisterComponentTypesEvent;
+use craft\events\RegisterCpNavItemsEvent;
 use craft\events\RegisterElementSourcesEvent;
 use craft\events\RegisterTemplateRootsEvent;
 use craft\services\Fields;
+use craft\web\twig\variables\Cp;
 use craft\web\twig\variables\CraftVariable;
 use craft\web\View;
 use modules\businesslogic\fields\Sidebars;
@@ -53,6 +55,7 @@ class BusinessLogic extends Module
         $this->_registerTwigExtension();
         $this->_registerTemplateDirectory();
 
+        $this->_modifyCpNavigation();
         $this->_modifyEntrySources();
 //        $this->_removeRedactorLinks();
         $this->_showTotals();
@@ -136,7 +139,44 @@ class BusinessLogic extends Module
     // ================================================================================ //
 
     /**
-     * Modify entry sources
+     * Modify control panel navigation.
+     */
+    private function _modifyCpNavigation()
+    {
+        // If not a control panel request, bail
+        if (!Craft::$app->getRequest()->getIsCpRequest()) {
+            return;
+        }
+
+        // Triggered when the control panel navigation is loaded
+        Event::on(
+            Cp::class,
+            Cp::EVENT_REGISTER_CP_NAV_ITEMS,
+            static function(RegisterCpNavItemsEvent $event) {
+
+                // No "User Manual" link by default
+                $userManual = false;
+
+                // Loop through nav items
+                foreach ($event->navItems as $i => $item) {
+                    // If "User Manual" exists, pull it out
+                    if ('User Manual' == $item['label']) {
+                        $userManual = $item;
+                        unset($event->navItems[$i]);
+                    }
+                }
+
+                // If "User Manual" exists, append it to the end
+                if ($userManual) {
+                    $event->navItems[] = $userManual;
+                }
+
+            }
+        );
+    }
+
+    /**
+     * Modify entry sources.
      */
     private function _modifyEntrySources()
     {
@@ -181,7 +221,7 @@ class BusinessLogic extends Module
 //    }
 
     /**
-     * Display element totals
+     * Display element totals.
      */
     private function _showTotals()
     {

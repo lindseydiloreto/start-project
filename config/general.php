@@ -47,8 +47,10 @@ return [
     // Staging environment settings
     'staging' => [
         'devMode' => true,
+        'runQueueAutomatically' => false, // Trigger queue via cron job
     ],
     // Production environment settings
     'production' => [
+        'runQueueAutomatically' => false, // Trigger queue via cron job
     ],
 ];

@@ -16,7 +16,7 @@ return [
         'convertFilenamesToAscii' => true,
 
         'cacheDuration'      => 'P30D', // Cache for 30 days
-        'softDeleteDuration' => 'P6M',  // Keep soft-deleted items for 6 months
+        'softDeleteDuration' => 'P1Y', // Keep soft-deleted items for 1 year
 
         'userSessionDuration'           => 'P1D', // Stay logged in for 1 day
         'rememberedUserSessionDuration' => 'P1Y', // Stay logged in for 1 year ("Remember Me")

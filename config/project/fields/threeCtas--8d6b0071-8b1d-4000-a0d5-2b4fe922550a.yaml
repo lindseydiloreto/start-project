@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 18d36d4e-9c72-4fcf-97a1-a668b70fd249
+handle: threeCtas
+instructions: ''
+name: 'Three CTAs'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_threectas}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

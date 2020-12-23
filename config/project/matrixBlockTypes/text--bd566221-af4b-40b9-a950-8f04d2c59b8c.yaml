@@ -1,0 +1,161 @@
+field: 57439ba8-7b9a-4a6f-925c-791faec8269a
+fieldLayouts:
+  cc16cc83-8470-48b8-bbaa-fcda87beb1ea:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 03b34141-8ace-49bf-83cd-070779334bac
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 10777443-a139-4a09-a2d1-dcf4c8c93597
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 27854c4e-fdce-42da-b6c2-85f68395135f
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  03b34141-8ace-49bf-83cd-070779334bac:
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: __blank__
+    searchable: true
+    settings:
+      availableTransforms:
+        - 2d645b41-72a4-4f60-a394-8a23532182be
+      availableVolumes:
+        - 5ebe069f-09ab-4250-8880-37a3a169ab68
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ADVANCED.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  10777443-a139-4a09-a2d1-dcf4c8c93597:
+    contentColumnType: string
+    fieldGroup: null
+    handle: padding
+    instructions: ''
+    name: Padding
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - None
+            -
+              - value
+              - ''
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Light
+            -
+              - value
+              - light
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Heavy
+            -
+              - value
+              - heavy
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  27854c4e-fdce-42da-b6c2-85f68395135f:
+    contentColumnType: string
+    fieldGroup: null
+    handle: margin
+    instructions: ''
+    name: Margin
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - None
+            -
+              - value
+              - ''
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Light
+            -
+              - value
+              - light
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Heavy
+            -
+              - value
+              - heavy
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: text
+name: Text
+sortOrder: 1

@@ -1,0 +1,99 @@
+field: 57439ba8-7b9a-4a6f-925c-791faec8269a
+fieldLayouts:
+  fe6d1ad7-77ef-4195-8592-4dfc70bc03ed:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d8193927-d011-4f5e-a6f2-244e8be9de3c
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 619de457-107b-4d61-827d-b7acada9a0f9
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  619de457-107b-4d61-827d-b7acada9a0f9:
+    contentColumnType: string
+    fieldGroup: null
+    handle: width
+    instructions: ''
+    name: __blank__
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Centered
+            -
+              - value
+              - centered
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - 'Full Width'
+            -
+              - value
+              - fullWidth
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  d8193927-d011-4f5e-a6f2-244e8be9de3c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: ''
+    name: __blank__
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5ebe069f-09ab-4250-8880-37a3a169ab68'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Select an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:5ebe069f-09ab-4250-8880-37a3a169ab68'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:5ebe069f-09ab-4250-8880-37a3a169ab68'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: image
+name: Image
+sortOrder: 2

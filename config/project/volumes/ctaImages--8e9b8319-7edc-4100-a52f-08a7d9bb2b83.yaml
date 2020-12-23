@@ -1,0 +1,38 @@
+fieldLayouts:
+  caf71406-71f3-4968-806b-045cd726f601:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: ctaImages
+hasUrls: true
+name: 'CTA Images'
+settings:
+  path: '@assetsPath/cta-images'
+sortOrder: 3
+type: craft\volumes\Local
+url: '@assetsUrl/cta-images'

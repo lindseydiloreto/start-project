@@ -1,0 +1,47 @@
+fieldLayouts:
+  7f62b748-1917-48ab-a966-0586571445d5:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8d6b0071-8b1d-4000-a0d5-2b4fe922550a
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Panel
+        sortOrder: 1
+handle: threeIconsWithText
+hasTitleField: true
+name: '3 icons with text'
+section: 34bba139-c036-4e65-a8c0-bf6c451a4e12
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

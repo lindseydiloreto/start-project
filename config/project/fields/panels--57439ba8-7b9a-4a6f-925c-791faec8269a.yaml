@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 18d36d4e-9c72-4fcf-97a1-a668b70fd249
+handle: panels
+instructions: 'Configure how your main content will be displayed.'
+name: Panels
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_panels}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

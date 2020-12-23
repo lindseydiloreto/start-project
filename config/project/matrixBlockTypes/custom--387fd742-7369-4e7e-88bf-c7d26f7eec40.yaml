@@ -1,0 +1,43 @@
+field: 57439ba8-7b9a-4a6f-925c-791faec8269a
+fieldLayouts:
+  4aed05d2-26e8-4f56-87c6-2ce81caf63a8:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 110489c0-bfa0-4b2e-8b4c-a5f5de78a131
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  110489c0-bfa0-4b2e-8b4c-a5f5de78a131:
+    contentColumnType: string
+    fieldGroup: null
+    handle: panel
+    instructions: ''
+    name: __blank__
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: 'Select a custom panel'
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:34bba139-c036-4e65-a8c0-bf6c451a4e12'
+      targetSiteId: null
+      validateRelatedElements: true
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: custom
+name: Custom
+sortOrder: 4

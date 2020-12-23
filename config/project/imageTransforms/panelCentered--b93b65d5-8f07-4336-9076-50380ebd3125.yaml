@@ -1,0 +1,9 @@
+format: null
+handle: panelCentered
+height: 600
+interlace: none
+mode: fit
+name: 'Panel - Centered'
+position: center-center
+quality: null
+width: 800

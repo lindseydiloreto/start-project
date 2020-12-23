@@ -1,0 +1,14 @@
+enableVersioning: false
+handle: sidebars
+name: Sidebars
+propagationMethod: all
+siteSettings:
+  1891a55f-7f04-4fc8-abfd-3fd84207d90b:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 8db9bbbb-3fc5-4f53-bf3d-3860898519fd
+type: structure

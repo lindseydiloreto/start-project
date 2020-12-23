@@ -1,0 +1,122 @@
+dateModified: 1608706919
+email:
+  fromEmail: support@doublesecretagency.com
+  fromName: Prototype
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      additionalCss: ''
+      cssFile: '@resourcesUrl/css/cp.css'
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  dashboard-begone:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  knock-knock:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.1.1
+  mailgun:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  matrix-colors:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      matrixBlockColors:
+        __assoc__:
+          -
+            - 0
+            -
+              __assoc__:
+                -
+                  - blockType
+                  - text
+                -
+                  - backgroundColor
+                  - '#deecd5'
+          -
+            - 2
+            -
+              __assoc__:
+                -
+                  - blockType
+                  - image
+                -
+                  - backgroundColor
+                  - '#ecebd5'
+          -
+            - 1
+            -
+              __assoc__:
+                -
+                  - blockType
+                  - embed
+                -
+                  - backgroundColor
+                  - '#d5dfec'
+          -
+            - 3
+            -
+              __assoc__:
+                -
+                  - blockType
+                  - custom
+                -
+                  - backgroundColor
+                  - '#ecddd5'
+          -
+            - 4
+            -
+              __assoc__:
+                -
+                  - blockType
+                  - callToAction
+                -
+                  - backgroundColor
+                  - '#d5dfec'
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  redactor-custom-styles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor-tweaks:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  usermanual:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.1
+    settings:
+      pluginNameOverride: ''
+      section: '5'
+      templateOverride: _layout/internalDocs
+system:
+  edition: solo
+  live: true
+  name: 'Starter Site'
+  schemaVersion: 3.5.13
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

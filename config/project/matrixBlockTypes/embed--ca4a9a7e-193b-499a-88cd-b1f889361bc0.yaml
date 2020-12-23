@@ -1,0 +1,40 @@
+field: 57439ba8-7b9a-4a6f-925c-791faec8269a
+fieldLayouts:
+  3c6f922b-8c79-41b1-a050-c921a89d41de:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 5d36ed79-72af-4edb-b06b-3c9acab5044e
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  5d36ed79-72af-4edb-b06b-3c9acab5044e:
+    contentColumnType: text
+    fieldGroup: null
+    handle: snippet
+    instructions: ''
+    name: __blank__
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: '1'
+      columnType: null
+      initialRows: '4'
+      multiline: '1'
+      placeholder: 'Paste code snippet here...'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: embed
+name: Embed
+sortOrder: 3

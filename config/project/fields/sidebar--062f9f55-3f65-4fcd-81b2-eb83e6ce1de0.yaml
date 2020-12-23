@@ -1,0 +1,9 @@
+contentColumnType: text
+fieldGroup: 34f047fc-a5a1-4ea3-b134-fe21cdc31f89
+handle: sidebar
+instructions: 'Optionally add a sidebar to the page.'
+name: Sidebar
+searchable: false
+translationKeyFormat: null
+translationMethod: none
+type: modules\businesslogic\fields\Sidebars

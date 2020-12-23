@@ -7,6 +7,8 @@ return [
         'siteUrl'     => getenv('CONFIG_SITEURL'),
         'securityKey' => getenv('SECURITY_KEY'),
 
+        'allowAdminChanges' => false, // Restrict changes to any Settings
+
         'useEmailAsUsername'   => true,
         'omitScriptNameInUrls' => true,
         'allowUpdates'         => false,
@@ -38,6 +40,7 @@ return [
     'dev' => [
         'devMode'               => true,
         'allowUpdates'          => true,
+        'allowAdminChanges'     => true,
         'enableTemplateCaching' => false,
         'testToEmailAddress'    => getenv('CONFIG_TESTTOEMAILADDRESS'),
     ],
@@ -47,7 +50,5 @@ return [
     ],
     // Production environment settings
     'production' => [
-        // Disable project config changes on production
-        'allowAdminChanges' => false,
     ],
 ];

@@ -26,7 +26,7 @@ return [
 
         'aliases' => [
             '@web'          => null,
-            '@webroot'      => null,
+            '@webroot'      => getenv('CONFIG_SITEPATH'),
             '@baseUrl'      => getenv('CONFIG_SITEURL'),
             '@basePath'     => getenv('CONFIG_SITEPATH'),
             '@assetsUrl'    => getenv('CONFIG_SITEURL').'/assets',

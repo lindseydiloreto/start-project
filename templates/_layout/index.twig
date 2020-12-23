@@ -3,8 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Starter Site</title>
-{#<title>{{ (title ? "#{title} | ") ~ systemName }}</title>#}
+<title>{{ (title ? "#{title} | ") ~ systemName }}</title>
 {#{% include '_includes/favicon-set' %}#}
 {#{% include '_includes/app-variables' %}#}
 {% do view.registerAssetBundle(LayoutAssets) %}

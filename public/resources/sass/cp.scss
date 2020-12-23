@@ -33,6 +33,7 @@ body.login {
     color: $theme-1 !important;
     background-color: $theme-4 !important;
     &:not(.disabled):not(.inactive) {
+      &:focus            {background-color: $theme-4 !important;}
       &:hover,  &.hover  {background-color: $theme-5 !important;}
       &:active, &.active {background-color: $theme-2 !important;}
     }
@@ -94,6 +95,7 @@ li#nav-utilities a .badge {
   color: $theme-1 !important;
   background-color: $theme-3 !important;
   &:not(.disabled):not(.inactive) {
+    &:focus            {background-color: $theme-3 !important;}
     &:hover,  &.hover  {background-color: $theme-4 !important;}
     &:active, &.active {background-color: $theme-5 !important;}
   }

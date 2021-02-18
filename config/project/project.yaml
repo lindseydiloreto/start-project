@@ -1,4 +1,4 @@
-dateModified: 1608706919
+dateModified: 1613607358
 email:
   fromEmail: support@doublesecretagency.com
   fromName: Prototype
@@ -112,7 +112,7 @@ system:
   edition: solo
   live: true
   name: 'Starter Site'
-  schemaVersion: 3.5.13
+  schemaVersion: 3.6.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

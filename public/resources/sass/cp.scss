@@ -3,7 +3,7 @@
 @import 'redactor';
 
 // Main brand color
-$brand-color: #B23115;
+$brand-color: #104d72;
 
 // Automatically generate a CP theme
 $theme-1: lighten($brand-color, 63%);
@@ -16,7 +16,7 @@ $theme-5: darken($brand-color, 13%);
 body.login {
   background: $theme-3;
 }
-#login-form {
+#login {
   h1 {
     width: 100%;
     height: 34px;

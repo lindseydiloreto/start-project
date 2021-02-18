@@ -4,7 +4,7 @@
   "type": "project",
   "require": {
     "carlcs/craft-redactorcustomstyles": "^3.0",
-    "craftcms/cms": "^3.4",
+    "craftcms/cms": "^3.6",
     "craftcms/mailgun": "^1.4",
     "craftcms/redactor": "^2.6",
     "doublesecretagency/craft-cpcss": "^2.2",
@@ -27,18 +27,34 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.0"
+      "php": "7.4"
     }
   },
   "scripts": {
     "post-create-project-cmd": ["@php setup"],
     "post-install-cmd": ["@php sync"],
     "post-update-cmd": ["@php sync"],
+    "craft-update": [
+      "@php craft install/check && php craft migrate/all --interactive=0 || exit 0",
+      "@php craft install/check && php craft project-config/apply --interactive=0 || exit 0",
+      "@php craft install/check && php craft clear-caches/all --interactive=0 || exit 0",
+      "npm run prod"
+    ],
     "sync": [
-      "composer install && npm install --no-fund && npm run dev"
+      "composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev",
+      "npm install --no-fund",
+      "npm run dev"
+    ],
+    "deploy": [
+      "composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev",
+      "npm install --no-fund",
+      "npm run prod"
     ],
     "nuke": [
-      "rm -rf vendor/ && rm composer.lock && composer clear-cache && composer update"
+      "rm -rf vendor/",
+      "rm composer.lock",
+      "composer clear-cache",
+      "composer update"
     ],
     "nuke-npm": [
       "npm run nuke"

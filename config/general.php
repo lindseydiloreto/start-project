@@ -4,7 +4,6 @@ return [
     // Global settings
     '*' => [
         'cpTrigger'   => 'cp',
-        'siteUrl'     => getenv('CONFIG_SITEURL'),
         'securityKey' => getenv('SECURITY_KEY'),
 
         'allowAdminChanges' => false, // Restrict changes to any Settings

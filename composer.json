@@ -32,21 +32,23 @@
   },
   "scripts": {
     "post-create-project-cmd": ["@php setup"],
-    "post-install-cmd": ["@php sync"],
-    "post-update-cmd": ["@php sync"],
+    "post-install-cmd": ["composer craft-update"],
+    "post-update-cmd": ["composer craft-update"],
     "craft-update": [
       "@php craft install/check && php craft migrate/all --interactive=0 || exit 0",
       "@php craft install/check && php craft project-config/apply --interactive=0 || exit 0",
-      "@php craft install/check && php craft clear-caches/all --interactive=0 || exit 0",
-      "npm run prod"
+      "@php craft install/check && php craft clear-caches/all --interactive=0 || exit 0"
     ],
     "sync": [
       "composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev",
       "npm install --no-fund",
       "npm run dev"
     ],
-    "deploy": [
-      "composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev",
+    "deploy-staging": [
+      "composer sync"
+    ],
+    "deploy-production": [
+      "composer craft-update",
       "npm install --no-fund",
       "npm run prod"
     ],

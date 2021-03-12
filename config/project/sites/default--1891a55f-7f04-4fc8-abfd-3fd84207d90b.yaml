@@ -5,5 +5,5 @@ hasUrls: true
 language: en-US
 name: $BUSINESS_NAME
 primary: true
-siteGroup: 57cd948a-2dfe-4550-b0f2-053ee01da77c
+siteGroup: 57cd948a-2dfe-4550-b0f2-053ee01da77c # Default
 sortOrder: 1

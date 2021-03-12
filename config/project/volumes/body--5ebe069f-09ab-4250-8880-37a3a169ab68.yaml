@@ -34,5 +34,7 @@ name: Body
 settings:
   path: '@assetsPath/body'
 sortOrder: 1
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
 type: craft\volumes\Local
 url: '@assetsUrl/body'

@@ -1,11 +1,11 @@
-field: 57439ba8-7b9a-4a6f-925c-791faec8269a
+field: 57439ba8-7b9a-4a6f-925c-791faec8269a # Panels
 fieldLayouts:
   cc16cc83-8470-48b8-bbaa-fcda87beb1ea:
     tabs:
       -
         elements:
           -
-            fieldUid: 03b34141-8ace-49bf-83cd-070779334bac
+            fieldUid: 03b34141-8ace-49bf-83cd-070779334bac # __blank__
             instructions: null
             label: null
             required: '0'
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 10777443-a139-4a09-a2d1-dcf4c8c93597
+            fieldUid: 10777443-a139-4a09-a2d1-dcf4c8c93597 # Padding
             instructions: null
             label: null
             required: '0'
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 27854c4e-fdce-42da-b6c2-85f68395135f
+            fieldUid: 27854c4e-fdce-42da-b6c2-85f68395135f # Margin
             instructions: null
             label: null
             required: '0'
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  03b34141-8ace-49bf-83cd-070779334bac:
+  03b34141-8ace-49bf-83cd-070779334bac: # __blank__
     contentColumnType: text
     fieldGroup: null
     handle: text
@@ -43,9 +43,9 @@ fields:
     searchable: true
     settings:
       availableTransforms:
-        - 2d645b41-72a4-4f60-a394-8a23532182be
+        - 2d645b41-72a4-4f60-a394-8a23532182be # Image with wrapping text
       availableVolumes:
-        - 5ebe069f-09ab-4250-8880-37a3a169ab68
+        - 5ebe069f-09ab-4250-8880-37a3a169ab68 # Body
       cleanupHtml: true
       columnType: text
       configSelectionMode: choose
@@ -64,7 +64,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  10777443-a139-4a09-a2d1-dcf4c8c93597:
+  10777443-a139-4a09-a2d1-dcf4c8c93597: # Padding
     contentColumnType: string
     fieldGroup: null
     handle: padding
@@ -110,7 +110,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  27854c4e-fdce-42da-b6c2-85f68395135f:
+  27854c4e-fdce-42da-b6c2-85f68395135f: # Margin
     contentColumnType: string
     fieldGroup: null
     handle: margin

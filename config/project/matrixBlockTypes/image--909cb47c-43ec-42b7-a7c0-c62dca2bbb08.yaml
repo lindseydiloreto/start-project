@@ -1,11 +1,11 @@
-field: 57439ba8-7b9a-4a6f-925c-791faec8269a
+field: 57439ba8-7b9a-4a6f-925c-791faec8269a # Panels
 fieldLayouts:
   fe6d1ad7-77ef-4195-8592-4dfc70bc03ed:
     tabs:
       -
         elements:
           -
-            fieldUid: d8193927-d011-4f5e-a6f2-244e8be9de3c
+            fieldUid: d8193927-d011-4f5e-a6f2-244e8be9de3c # __blank__
             instructions: null
             label: null
             required: '0'
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 619de457-107b-4d61-827d-b7acada9a0f9
+            fieldUid: 619de457-107b-4d61-827d-b7acada9a0f9 # __blank__
             instructions: null
             label: null
             required: '0'
@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  619de457-107b-4d61-827d-b7acada9a0f9:
+  619de457-107b-4d61-827d-b7acada9a0f9: # __blank__
     contentColumnType: string
     fieldGroup: null
     handle: width
@@ -60,7 +60,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  d8193927-d011-4f5e-a6f2-244e8be9de3c:
+  d8193927-d011-4f5e-a6f2-244e8be9de3c: # __blank__
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -72,7 +72,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:5ebe069f-09ab-4250-8880-37a3a169ab68'
+      defaultUploadLocationSource: 'volume:5ebe069f-09ab-4250-8880-37a3a169ab68' # Body
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -82,11 +82,11 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:5ebe069f-09ab-4250-8880-37a3a169ab68'
+      singleUploadLocationSource: 'volume:5ebe069f-09ab-4250-8880-37a3a169ab68' # Body
       singleUploadLocationSubpath: ''
       source: null
       sources:
-        - 'volume:5ebe069f-09ab-4250-8880-37a3a169ab68'
+        - 'volume:5ebe069f-09ab-4250-8880-37a3a169ab68' # Body
       targetSiteId: null
       useSingleFolder: false
       validateRelatedElements: false

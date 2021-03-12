@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 57439ba8-7b9a-4a6f-925c-791faec8269a
+            fieldUid: 57439ba8-7b9a-4a6f-925c-791faec8269a # Panels
             instructions: null
             label: null
             required: '0'
@@ -40,7 +40,7 @@ fieldLayouts:
 handle: internalDocs
 hasTitleField: true
 name: 'How To Use This Website'
-section: 76b20844-7a97-4042-b1de-78c47c5cbf4c
+section: 76b20844-7a97-4042-b1de-78c47c5cbf4c # How To Use This Website
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

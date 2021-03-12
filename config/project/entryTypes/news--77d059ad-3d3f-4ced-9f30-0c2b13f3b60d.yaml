@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 63ecb9f3-46e5-4108-88d6-bbe79e8a6022
+            fieldUid: 63ecb9f3-46e5-4108-88d6-bbe79e8a6022 # Hero Image
             instructions: null
             label: null
             required: '0'
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 57439ba8-7b9a-4a6f-925c-791faec8269a
+            fieldUid: 57439ba8-7b9a-4a6f-925c-791faec8269a # Panels
             instructions: null
             label: null
             required: '0'
@@ -49,7 +49,7 @@ fieldLayouts:
 handle: news
 hasTitleField: true
 name: News
-section: f52621ed-e4a9-4525-93f8-a804b6e72dfc
+section: f52621ed-e4a9-4525-93f8-a804b6e72dfc # News
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

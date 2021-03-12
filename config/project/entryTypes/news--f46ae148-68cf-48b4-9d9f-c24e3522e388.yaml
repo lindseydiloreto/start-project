@@ -1,5 +1,5 @@
 fieldLayouts:
-  f051b6cf-621a-4bf2-914c-67ee46cb9265:
+  bef5be5e-a3c2-45fe-b796-ea50691dd263:
     tabs:
       -
         elements:
@@ -31,7 +31,7 @@ fieldLayouts:
 handle: news
 hasTitleField: true
 name: News
-section: 5deeb93f-33f2-42e4-ba35-4b9afe03c4b3
+section: 5deeb93f-33f2-42e4-ba35-4b9afe03c4b3 # Sidebars
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

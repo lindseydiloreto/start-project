@@ -3,7 +3,7 @@ handle: pages
 name: Pages
 propagationMethod: all
 siteSettings:
-  1891a55f-7f04-4fc8-abfd-3fd84207d90b:
+  1891a55f-7f04-4fc8-abfd-3fd84207d90b: # $BUSINESS_NAME
     enabledByDefault: true
     hasUrls: true
     template: _pages

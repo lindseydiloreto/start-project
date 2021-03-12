@@ -1,5 +1,5 @@
 contentColumnType: string
-fieldGroup: 18d36d4e-9c72-4fcf-97a1-a668b70fd249
+fieldGroup: 18d36d4e-9c72-4fcf-97a1-a668b70fd249 # Matrix
 handle: panels
 instructions: 'Configure how your main content will be displayed.'
 name: Panels

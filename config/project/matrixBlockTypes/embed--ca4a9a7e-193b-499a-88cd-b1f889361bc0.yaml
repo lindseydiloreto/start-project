@@ -1,11 +1,11 @@
-field: 57439ba8-7b9a-4a6f-925c-791faec8269a
+field: 57439ba8-7b9a-4a6f-925c-791faec8269a # Panels
 fieldLayouts:
   3c6f922b-8c79-41b1-a050-c921a89d41de:
     tabs:
       -
         elements:
           -
-            fieldUid: 5d36ed79-72af-4edb-b06b-3c9acab5044e
+            fieldUid: 5d36ed79-72af-4edb-b06b-3c9acab5044e # __blank__
             instructions: null
             label: null
             required: '0'
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  5d36ed79-72af-4edb-b06b-3c9acab5044e:
+  5d36ed79-72af-4edb-b06b-3c9acab5044e: # __blank__
     contentColumnType: text
     fieldGroup: null
     handle: snippet

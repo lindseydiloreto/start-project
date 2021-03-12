@@ -1,4 +1,4 @@
-dateModified: 1615507910
+dateModified: 1615508364
 email:
   fromEmail: $BUSINESS_EMAIL
   fromName: $BUSINESS_NAME
@@ -119,7 +119,7 @@ system:
   live: true
   name: $BUSINESS_NAME
   retryDuration: null
-  schemaVersion: 3.6.4
+  schemaVersion: 3.6.6
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

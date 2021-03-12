@@ -1,5 +1,5 @@
 fieldLayouts:
-  767b4859-06f4-4e5a-91d5-e7315ec75ca2:
+  c024ec20-85c9-40e4-b966-3d3a90109c97:
     tabs:
       -
         elements:
@@ -31,7 +31,7 @@ fieldLayouts:
 handle: faq
 hasTitleField: true
 name: FAQ
-section: 34bba139-c036-4e65-a8c0-bf6c451a4e12
+section: 34bba139-c036-4e65-a8c0-bf6c451a4e12 # Panels
 sortOrder: 3
 titleFormat: null
 titleTranslationKeyFormat: null

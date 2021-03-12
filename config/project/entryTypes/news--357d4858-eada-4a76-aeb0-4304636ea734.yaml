@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 63ecb9f3-46e5-4108-88d6-bbe79e8a6022
+            fieldUid: 63ecb9f3-46e5-4108-88d6-bbe79e8a6022 # Hero Image
             instructions: null
             label: null
             required: '0'
@@ -40,7 +40,7 @@ fieldLayouts:
 handle: news
 hasTitleField: false
 name: News
-section: b0ac9541-cb53-4dc6-86e4-56cb0604c874
+section: b0ac9541-cb53-4dc6-86e4-56cb0604c874 # Pages
 sortOrder: 3
 titleFormat: News
 titleTranslationKeyFormat: null

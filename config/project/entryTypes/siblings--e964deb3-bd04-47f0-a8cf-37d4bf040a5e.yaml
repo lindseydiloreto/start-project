@@ -1,5 +1,5 @@
 fieldLayouts:
-  dacc8e39-5efe-4f24-a0da-e93c5d606953:
+  1faeaea5-908a-4c7c-b229-24741706442d:
     tabs:
       -
         elements:
@@ -31,7 +31,7 @@ fieldLayouts:
 handle: siblings
 hasTitleField: true
 name: Siblings
-section: 5deeb93f-33f2-42e4-ba35-4b9afe03c4b3
+section: 5deeb93f-33f2-42e4-ba35-4b9afe03c4b3 # Sidebars
 sortOrder: 2
 titleFormat: null
 titleTranslationKeyFormat: null

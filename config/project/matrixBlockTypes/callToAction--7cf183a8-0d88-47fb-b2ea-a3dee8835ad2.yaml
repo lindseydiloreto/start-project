@@ -1,11 +1,11 @@
-field: 8d6b0071-8b1d-4000-a0d5-2b4fe922550a
+field: 8d6b0071-8b1d-4000-a0d5-2b4fe922550a # Three CTAs
 fieldLayouts:
   da89a6ea-19c2-42d7-9388-4248c5b66445:
     tabs:
       -
         elements:
           -
-            fieldUid: 209a61a0-3658-479e-b942-061e92998a72
+            fieldUid: 209a61a0-3658-479e-b942-061e92998a72 # Image
             instructions: null
             label: null
             required: '0'
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 9c78e7ec-39bf-4cce-9b77-d9d7a639fb77
+            fieldUid: 9c78e7ec-39bf-4cce-9b77-d9d7a639fb77 # Label
             instructions: null
             label: null
             required: '0'
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 895e66d7-838d-4607-b2c5-f4bf6728ab6c
+            fieldUid: 895e66d7-838d-4607-b2c5-f4bf6728ab6c # Description
             instructions: null
             label: null
             required: '0'
@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: f7b3814d-e596-4b6a-864d-735611edf9e0
+            fieldUid: f7b3814d-e596-4b6a-864d-735611edf9e0 # Button Text
             instructions: null
             label: null
             required: '0'
@@ -41,7 +41,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: c7606748-bcdf-4400-be70-7d490d28c4a7
+            fieldUid: c7606748-bcdf-4400-be70-7d490d28c4a7 # Button Link
             instructions: null
             label: null
             required: '0'
@@ -52,7 +52,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  209a61a0-3658-479e-b942-061e92998a72:
+  209a61a0-3658-479e-b942-061e92998a72: # Image
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -64,7 +64,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:5ebe069f-09ab-4250-8880-37a3a169ab68'
+      defaultUploadLocationSource: 'volume:5ebe069f-09ab-4250-8880-37a3a169ab68' # Body
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -74,7 +74,7 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:8e9b8319-7edc-4100-a52f-08a7d9bb2b83'
+      singleUploadLocationSource: 'volume:8e9b8319-7edc-4100-a52f-08a7d9bb2b83' # CTA Images
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'
@@ -85,7 +85,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  895e66d7-838d-4607-b2c5-f4bf6728ab6c:
+  895e66d7-838d-4607-b2c5-f4bf6728ab6c: # Description
     contentColumnType: text
     fieldGroup: null
     handle: description
@@ -95,7 +95,7 @@ fields:
     settings:
       availableTransforms: '*'
       availableVolumes:
-        - 8e9b8319-7edc-4100-a52f-08a7d9bb2b83
+        - 8e9b8319-7edc-4100-a52f-08a7d9bb2b83 # CTA Images
       cleanupHtml: true
       columnType: text
       configSelectionMode: choose
@@ -114,7 +114,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  9c78e7ec-39bf-4cce-9b77-d9d7a639fb77:
+  9c78e7ec-39bf-4cce-9b77-d9d7a639fb77: # Label
     contentColumnType: text
     fieldGroup: null
     handle: label
@@ -128,12 +128,12 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  c7606748-bcdf-4400-be70-7d490d28c4a7:
+  c7606748-bcdf-4400-be70-7d490d28c4a7: # Button Link
     contentColumnType: text
     fieldGroup: null
     handle: buttonLink
@@ -152,7 +152,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  f7b3814d-e596-4b6a-864d-735611edf9e0:
+  f7b3814d-e596-4b6a-864d-735611edf9e0: # Button Text
     contentColumnType: text
     fieldGroup: null
     handle: buttonText
@@ -166,7 +166,7 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none

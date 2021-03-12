@@ -34,5 +34,7 @@ name: 'Hero Images'
 settings:
   path: '@assetsPath/hero-images'
 sortOrder: 2
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
 type: craft\volumes\Local
 url: '@assetsUrl/hero-images'

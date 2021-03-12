@@ -27,12 +27,12 @@ return [
 
         'aliases' => [
             '@web'          => null,
-            '@webroot'      => getenv('CONFIG_SITEPATH'),
-            '@baseUrl'      => getenv('CONFIG_SITEURL'),
-            '@basePath'     => getenv('CONFIG_SITEPATH'),
-            '@assetsUrl'    => getenv('CONFIG_SITEURL').'/assets',
-            '@assetsPath'   => getenv('CONFIG_SITEPATH').'/assets',
-            '@resourcesUrl' => getenv('CONFIG_SITEURL').'/resources',
+            '@webroot'      => getenv('SITE_BASEPATH'),
+            '@baseUrl'      => getenv('SITE_BASEURL'),
+            '@basePath'     => getenv('SITE_BASEPATH'),
+            '@assetsUrl'    => getenv('SITE_BASEURL').'/assets',
+            '@assetsPath'   => getenv('SITE_BASEPATH').'/assets',
+            '@resourcesUrl' => getenv('SITE_BASEURL').'/resources',
         ],
     ],
     // Dev environment settings
@@ -41,7 +41,7 @@ return [
         'allowUpdates'          => true,
         'allowAdminChanges'     => true,
         'enableTemplateCaching' => false,
-        'testToEmailAddress'    => getenv('CONFIG_TESTTOEMAILADDRESS'),
+        'testToEmailAddress'    => getenv('TEST_EMAIL'),
     ],
     // Staging environment settings
     'staging' => [

@@ -1,9 +1,9 @@
-baseUrl: $CONFIG_SITEURL
+baseUrl: $SITE_BASEURL
 enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: 'Starter Site'
+name: $BUSINESS_NAME
 primary: true
 siteGroup: 57cd948a-2dfe-4550-b0f2-053ee01da77c
 sortOrder: 1

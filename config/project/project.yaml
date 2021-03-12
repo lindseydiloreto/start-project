@@ -1,8 +1,14 @@
-dateModified: 1613607358
+dateModified: 1615507910
 email:
-  fromEmail: support@doublesecretagency.com
-  fromName: Prototype
-  transportType: craft\mail\transportadapters\Sendmail
+  fromEmail: $BUSINESS_EMAIL
+  fromName: $BUSINESS_NAME
+  replyToEmail: null
+  template: null
+  transportSettings:
+    apiKey: $MAILGUN_APIKEY
+    domain: $MAILGUN_DOMAIN
+    endpoint: $MAILGUN_ENDPOINT
+  transportType: craft\mailgun\MailgunAdapter
 plugins:
   cp-css:
     edition: standard
@@ -111,7 +117,8 @@ plugins:
 system:
   edition: solo
   live: true
-  name: 'Starter Site'
+  name: $BUSINESS_NAME
+  retryDuration: null
   schemaVersion: 3.6.4
   timeZone: America/Los_Angeles
 users:

@@ -64,12 +64,12 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  10777443-a139-4a09-a2d1-dcf4c8c93597: # Padding
+  27854c4e-fdce-42da-b6c2-85f68395135f: # Margin
     contentColumnType: string
     fieldGroup: null
-    handle: padding
+    handle: margin
     instructions: ''
-    name: Padding
+    name: Margin
     searchable: false
     settings:
       optgroups: true
@@ -110,12 +110,12 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  27854c4e-fdce-42da-b6c2-85f68395135f: # Margin
+  10777443-a139-4a09-a2d1-dcf4c8c93597: # Padding
     contentColumnType: string
     fieldGroup: null
-    handle: margin
+    handle: padding
     instructions: ''
-    name: Margin
+    name: Padding
     searchable: false
     settings:
       optgroups: true

@@ -52,6 +52,25 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
+  9c78e7ec-39bf-4cce-9b77-d9d7a639fb77: # Label
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: ''
+    name: Label
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   209a61a0-3658-479e-b942-061e92998a72: # Image
     contentColumnType: string
     fieldGroup: null
@@ -114,25 +133,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  9c78e7ec-39bf-4cce-9b77-d9d7a639fb77: # Label
-    contentColumnType: text
-    fieldGroup: null
-    handle: label
-    instructions: ''
-    name: Label
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
   c7606748-bcdf-4400-be70-7d490d28c4a7: # Button Link
     contentColumnType: text
     fieldGroup: null

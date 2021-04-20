@@ -18,9 +18,9 @@ class Extension extends AbstractExtension implements GlobalsInterface
 
         $globals['LayoutAssets'] = LayoutAssets::class;
 
-        $globals['baseUrl']      = getenv('CONFIG_SITEURL');
-        $globals['assetsUrl']    = getenv('CONFIG_SITEURL').'/assets';
-        $globals['resourcesUrl'] = getenv('CONFIG_SITEURL').'/resources';
+        $globals['baseUrl']      = getenv('SITE_BASEURL');
+        $globals['assetsUrl']    = getenv('SITE_BASEURL').'/assets';
+        $globals['resourcesUrl'] = getenv('SITE_BASEURL').'/resources';
 
         return $globals;
     }
